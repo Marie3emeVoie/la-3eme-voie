@@ -1,4 +1,5 @@
 # 🌱 La 3ème Voie
+![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/Licence-CC%20BY--NC--ND%204.0-lightgrey.svg)
 
 Supports éducatifs et visuels pour enfants à besoins spécifiques/particuliers et parcours d’apprentissage alternatif — animés par **Marie** et **Dina** pour *La 3ème Voie*.
 
@@ -74,8 +75,14 @@ Ce projet est né grâce à une collaboration humaine et technologique exception
 
 ## 📝 Licence
 
-Ce projet est publié sous licence [**Creative Commons Zéro v1.0 Universelle (CC0 1.0)**](https://creativecommons.org/publicdomain/zero/1.0/deed.fr).  
-Vous êtes libres de **partager, adapter et utiliser** le matériel sans restriction, à condition d’en attribuer la paternité.
+Ce projet est publié sous la licence [**Creative Commons BY-NC-ND 4.0**](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.fr).  
+Cela signifie que :
+
+- Vous pouvez **partager** librement les contenus en citant l’auteure
+- Vous **ne pouvez pas** les utiliser à des fins commerciales
+- Vous **ne pouvez pas** les modifier ni créer des œuvres dérivées
+
+📄 Voir le fichier [`LICENSE`](./LICENSE) pour plus de détails.
 
 ---
 
