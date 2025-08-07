@@ -39,18 +39,19 @@ export default function App() {
   // --- Sidebar & Intersection Observer Setup ---
   // Define the sections to be tracked by the sidebar.
   const sections = [
-    { id: 'hero-section', title: 'Accueil', thumbnail: Card_1 },
+    { id: 'hero-section', title: 'La 3ème Voie Éducative', thumbnail: Card_1 }, // Updated title here
     { id: 'about-me-section', title: 'Qui suis-je?', thumbnail: Card_2 },
     { id: 'impossible-choice-section', title: 'Le choix impossible', thumbnail: 'https://placehold.co/80x50/FAFFFA/405449?text=Choix' }, // Card 3: placeholder
     { id: 'third-way-principles', title: 'La 3e Voie', thumbnail: 'https://placehold.co/80x50/438951/FFFFFF?text=Voie' }, // Card 3a: placeholder
     { id: 'principles-diagram', title: 'Principes', thumbnail: Card_4_SVG }, // Card 4: SVG
-    { id: 'learning-approach', title: 'Apprentissage', thumbnail: Card_5 },
-    { id: 'my-role-section', title: 'Mon rôle', thumbnail: 'https://placehold.co/80x50/FAFFFA/405449?text=Rôle' }, // Card 6: placeholder
-    { id: 'who-i-accompany', title: 'Qui j\'accompagne', thumbnail: Card_7 },
+    { id: 'inclusive-education-section', title: 'Éducation Inclusive', thumbnail: Card_4a_PNG }, // New section for Card_4a_PNG
+    { id: 'learning-approach', title: 'Apprentissage', thumbnail: Card_7 }, // Changed thumbnail to Card_7
+    { id: 'my-role-section', title: 'Mon rôle', thumbnail: Card_5 }, // Changed thumbnail to Card_5
+    { id: 'who-i-accompany', title: 'Qui j\'accompagne', thumbnail: Card_7 }, // Keeping Card_7 for thumbnail, but main image will be different
     { id: 'my-services-section', title: 'Mes services', thumbnail: Card_8_SVG }, // Card 8: SVG
     { id: 'five-pillars-section', title: 'Les 5 piliers', thumbnail: Card_9 },
     { id: 'testimonials-section', title: 'Témoignages', thumbnail: Card_10 },
-    { id: 'contact-section', title: 'Contact', thumbnail: Card_11 },
+    { id: 'contact-section', title: 'Contact', thumbnail: Card_10 }, // Using Card_10 for contact thumbnail
     { id: 'free-resources-section', title: 'Ressources', thumbnail: Block_12 },
     { id: 'capsules-banner', title: 'Capsules', thumbnail: 'https://placehold.co/80x50/C1EBE2/3B4540?text=Capsules' },
   ];
@@ -169,7 +170,7 @@ export default function App() {
 
   const Testimonial = ({ quote, attribution }) => (
     <div
-      className="relative p-6 rounded-lg mb-8"
+      className="relative p-6 rounded-lg mb-8 min-h-[150px]" // Added min-h for testimonials
       style={{
         backgroundColor: '#FAFFFA',
         borderTop: '8px solid #438951',
@@ -294,7 +295,12 @@ export default function App() {
                   style={viewType === 'filmStrip' ? { height: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' } : {}} // Fixed height for filmstrip items
                 >
                   {viewType === 'filmStrip' ? (
-                    <img src={section.thumbnail} alt={section.title} className="w-full h-full object-cover rounded-md max-w-full max-h-full" />
+                    <div className="relative w-full h-full"> {/* Wrapper for image and number overlay */}
+                      <img src={section.thumbnail} alt={section.title} className="block w-full h-full object-cover rounded-md max-w-full max-h-full" />
+                      <div className="absolute top-1 left-1 bg-black bg-opacity-50 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+                        {index + 1}
+                      </div>
+                    </div>
                   ) : (
                     <div className="flex items-center w-full overflow-hidden"> {/* Added overflow-hidden to list item container */}
                       <span className={`text-xs font-bold mr-2 flex-shrink-0 ${activeSection === section.id ? 'text-[#6BA8F4]' : 'text-gray-500'}`}> {/* Blue number */}
@@ -321,8 +327,9 @@ export default function App() {
         <div className="overflow-hidden rounded-t-2xl md:rounded-l-2xl md:rounded-tr-none md:w-[35%]">
           <img
             src={Card_1}
-            alt="Une approche humaine, vivante et libre"
-            className="w-full h-full object-cover max-w-full max-h-full"
+            alt="Enfant et adulte assis dans un espace d’apprentissage lumineux et coloré, inspiré de la pédagogie Montessori"
+            title="Enfant et adulte assis dans un espace d’apprentissage lumineux et coloré, inspiré de la pédagogie Montessori"
+            className="block w-full h-full object-cover max-w-full max-h-full"
             onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/800x600/C1EBE2/3B4540?text=La+3eme+Voie+Educative"; }}
           />
         </div>
@@ -350,8 +357,9 @@ export default function App() {
             <div className="md:w-[35%] h-full overflow-hidden rounded-b-2xl md:rounded-r-2xl md:rounded-bl-none">
               <img
                 src={Card_2}
-                alt="Une educatrice avec des enfants"
-                className="w-full h-full object-cover max-w-full max-h-full"
+                alt="Éducatrice bienveillante avec enfants dans un cadre d’éducation alternative"
+                title="Éducatrice bienveillante avec enfants dans un cadre d’éducation alternative"
+                className="block w-full h-full object-cover max-w-full max-h-full"
                 onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/400x600/DDEFE3/559E60?text=Kids+and+Teacher"; }}
               />
             </div>
@@ -361,23 +369,23 @@ export default function App() {
 
       {/* Card 3 - "Le choix impossible des parents" - Three-column card. */}
       <section id="impossible-choice-section" ref={sectionRefs.current['impossible-choice-section']} className="w-full mb-10">
-        <Card className="p-6 custom-shadow w-full" style={{ backgroundColor: '#FAFFFA' }}>
+        <Card className="p-6 custom-shadow w-full min-h-[200px]" style={{ backgroundColor: '#FAFFFA' }}>
           <CardContent>
             <h2 className="text-4xl font-extrabold mb-8 text-left">Le choix impossible des parents</h2>
             <div className="flex flex-col md:flex-row items-stretch gap-6">
-              <Card className="rounded-2xl p-4 flex-1" style={{ backgroundColor: '#FAFFFA', border: '1px solid #D1D5DB' }}>
+              <Card className="rounded-2xl p-4 flex-1 min-h-[120px]" style={{ backgroundColor: '#FAFFFA', border: '1px solid #D1D5DB' }}> {/* Added min-h */}
                 <CardContent>
                   <h3 className="text-xl font-extrabold mb-2">École classique</h3>
                   <p>Souvent rigide et peu adaptée aux besoins spécifiques des enfants atypiques.</p>
                 </CardContent>
               </Card>
-              <Card className="rounded-2xl p-4 flex-1" style={{ backgroundColor: '#FAFFFA', border: '1px solid #D1D5DB' }}>
+              <Card className="rounded-2xl p-4 flex-1 min-h-[120px]" style={{ backgroundColor: '#FAFFFA', border: '1px solid #D1D5DB' }}> {/* Added min-h */}
                 <CardContent>
                   <h3 className="text-xl font-extrabold mb-2">Structures spécialisées</h3>
                   <p>Orientation vers des institutions, parfois jusqu'à la fin de vie.</p>
                 </CardContent>
               </Card>
-              <Card className="rounded-2xl p-4 flex-1" style={{ backgroundColor: '#FAFFFA', border: '1px solid #D1D5DB' }}>
+              <Card className="rounded-2xl p-4 flex-1 min-h-[120px]" style={{ backgroundColor: '#FAFFFA', border: '1px solid #D1D5DB' }}> {/* Added min-h */}
                 <CardContent>
                   <h3 className="text-xl font-extrabold mb-2">La 3ème voie</h3>
                   <p>Un espace à créer, plus humain, plus souple, plus libre et respectueux du rythme de chaque enfant.</p>
@@ -392,25 +400,51 @@ export default function App() {
       <section id="third-way-principles" ref={sectionRefs.current['third-way-principles']} className="w-full mb-10 p-6 md:p-10 rounded-2xl custom-shadow" style={{ backgroundColor: '#438951' }}>
         <h2 className="text-4xl font-extrabold mb-8 text-white">La 3e Voie</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
-          <div className="p-6 rounded-2xl" style={{ backgroundColor: '#559E60', border: '1px solid #ffffff' }}>
+          <div className="p-6 rounded-2xl min-h-[150px]" style={{ backgroundColor: '#559E60', border: '1px solid #ffffff' }}> {/* Added min-h */}
             <h3 className="text-xl font-extrabold mb-2 text-white">Entre deux extrêmes</h3>
             <p className="text-white">
               Une alternative entre l'école classique rigide et l'exclusion vers des structures spécialisées.
             </p>
           </div>
-          <div className="p-6 rounded-2xl" style={{ backgroundColor: '#559E60', border: '1px solid #ffffff' }}>
+          <div className="p-6 rounded-2xl min-h-[150px]" style={{ backgroundColor: '#559E60', border: '1px solid #ffffff' }}> {/* Added min-h */}
             <h3 className="text-xl font-extrabold mb-2 text-white">Personnalisée</h3>
             <p className="text-white">
               Adaptée au rythme unique de chaque enfant, respectueuse de ses besoins spécifiques.
             </p>
           </div>
-          <div className="p-6 rounded-2xl" style={{ backgroundColor: '#559E60', border: '1px solid #ffffff' }}>
+          <div className="p-6 rounded-2xl min-h-[150px]" style={{ backgroundColor: '#559E60', border: '1px solid #ffffff' }}> {/* Added min-h and corrected closing brace */}
             <h3 className="text-xl font-extrabold mb-2 text-white">Inclusive</h3>
             <p className="text-white">
               Les parents sont pleinement intégrés dans le processus éducatif de leur enfant.
             </p>
           </div>
         </div>
+      </section>
+
+      {/* New Section for Card_4a_PNG: Inclusive Education */}
+      <section id="inclusive-education-section" ref={sectionRefs.current['inclusive-education-section']} className="w-full mb-10">
+        <Card className="p-6 custom-shadow w-full" style={{ backgroundColor: '#FAFFFA' }}>
+          <CardContent className="flex flex-col md:flex-row items-center gap-8">
+            <div className="md:w-1/2">
+              <img
+                src={Card_4a_PNG}
+                alt="Enseignante attentionnée avec enfants d’origines diverses dans une classe lumineuse et sécurisante"
+                title="Enseignante attentionnée avec enfants d’origines diverses dans une classe lumineuse et sécurisante"
+                className="block w-full h-auto max-w-full max-h-full rounded-lg"
+                onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/600x400/C1EBE2/3B4540?text=Education+Inclusive"; }}
+              />
+            </div>
+            <div className="md:w-1/2 text-left">
+              <h2 className="text-4xl font-extrabold mb-8">Une éducation vraiment inclusive</h2>
+              <p className="mb-4">
+                Nous croyons que chaque enfant a sa place et mérite une éducation qui respecte sa singularité. Nos méthodes sont conçues pour créer un environnement où la diversité est célébrée.
+              </p>
+              <p>
+                L'inclusion n'est pas seulement une philosophie, c'est la pierre angulaire de notre approche, garantissant que tous les enfants se sentent valorisés et soutenus.
+              </p>
+            </div>
+          </CardContent>
+        </Card>
       </section>
 
       {/* Card 4 - The principles of the 3rd way with an image placeholder. */}
@@ -422,8 +456,9 @@ export default function App() {
           <div className="flex justify-center items-center my-8 md:my-0">
             <img
               src={Card_4_SVG}
-              alt="Diagramme des principes de la 3ème voie"
-              className="w-full h-auto max-w-full max-h-full"
+              alt="Une infographie verte avec cinq cercles reliés par des flèches. Chaque cercle contient une icône et un texte en dessous. Les étiquettes sont, de gauche à droite : « Approche adaptée », « Personnalisation », « Respect du rythme », « Espace d’expérimentation » et « Inclusion des parents »."
+              title="Une infographie verte avec cinq cercles reliés par des flèches. Chaque cercle contient une icône et un texte en dessous. Les étiquettes sont, de gauche à droite : « Approche adaptée », « Personnalisation », « Respect du rythme », « Espace d’expérimentation » et « Inclusion des parents »."
+              className="block w-full h-auto max-w-full max-h-full"
               onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/600x400/C1EBE2/3B4540?text=Diagramme+des+principes"; }}
             />
           </div>
@@ -438,29 +473,40 @@ export default function App() {
       {/* Card 5 - Learning Approach */}
       <section id="learning-approach" ref={sectionRefs.current['learning-approach']} className="w-full mb-10">
         <Card className="p-6 custom-shadow w-full" style={{ backgroundColor: '#FAFFFA' }}>
-          <CardContent>
-            <h2 className="text-4xl font-extrabold mb-8 text-left">Un apprentissage serein et épanouissant</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-2xl font-extrabold mb-4">Rythme de l'enfant</h3>
-                <p className="mb-4">
-                  Chaque enfant est unique. L'approche respecte son rythme naturel d'apprentissage, sans pression ni comparaison.
-                </p>
-                <h3 className="text-2xl font-extrabold mb-4">Pédagogie active</h3>
-                <p>
-                  L'enfant est acteur de ses découvertes. Les activités sont conçues pour stimuler sa curiosité et son autonomie.
-                </p>
+          <CardContent className="flex flex-col md:flex-row items-center gap-8">
+            <div className="md:w-1/2">
+              <h2 className="text-4xl font-extrabold mb-8 text-left">Un apprentissage serein et épanouissant</h2>
+              <div className="grid grid-cols-1 gap-8">
+                <div>
+                  <h3 className="text-2xl font-extrabold mb-4">Rythme de l'enfant</h3>
+                  <p className="mb-4">
+                    Chaque enfant est unique. L'approche respecte son rythme naturel d'apprentissage, sans pression ni comparaison.
+                  </p>
+                  <h3 className="text-2xl font-extrabold mb-4">Pédagogie active</h3>
+                  <p>
+                    L'enfant est acteur de ses découvertes. Les activités sont conçues pour stimuler sa curiosité et son autonomie.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-extrabold mb-4">Environnement bienveillant</h3>
+                  <p className="mb-4">
+                    Un cadre sécurisant et stimulant où l'enfant se sent libre d'explorer, d'expérimenter et de s'exprimer.
+                  </p>
+                  <h3 className="text-2xl font-extrabold mb-4">Développement global</h3>
+                  <p>
+                    L'accent est mis sur toutes les facettes du développement : cognitive, émotionnelle, sociale et physique.
+                  </p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-2xl font-extrabold mb-4">Environnement bienveillant</h3>
-                <p className="mb-4">
-                  Un cadre sécurisant et stimulant où l'enfant se sent libre d'explorer, d'expérimenter et de s'exprimer.
-                </p>
-                <h3 className="text-2xl font-extrabold mb-4">Développement global</h3>
-                <p>
-                  L'accent est mis sur toutes les facettes du développement : cognitive, émotionnelle, sociale et physique.
-                </p>
-              </div>
+            </div>
+            <div className="md:w-1/2">
+              <img
+                src={Card_7}
+                alt="Matériel éducatif avec supports visuels, outils sensoriels et cartes adaptées aux besoins spécifiques"
+                title="Matériel éducatif avec supports visuels, outils sensoriels et cartes adaptées aux besoins spécifiques"
+                className="block w-full h-auto max-w-full max-h-full rounded-lg"
+                onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/600x400/C1EBE2/3B4540?text=Learning+Materials"; }}
+              />
             </div>
           </CardContent>
         </Card>
@@ -469,28 +515,27 @@ export default function App() {
       {/* Card 6 - My Role Section */}
       <section id="my-role-section" ref={sectionRefs.current['my-role-section']} className="w-full mb-10">
         <Card className="p-6 custom-shadow w-full" style={{ backgroundColor: '#FAFFFA' }}>
-          <CardContent>
-            <h2 className="text-4xl font-extrabold mb-8 text-left">Mon rôle : Accompagner, Soutenir, Guider</h2>
-            <div className="flex flex-col md:flex-row items-center gap-8">
-              <div className="md:w-1/2">
-                <img
-                  src="https://placehold.co/600x400/C1EBE2/3B4540?text=Mon+Role" // Card 6: placeholder
-                  alt="Mon rôle d'accompagnante"
-                  className="w-full h-auto max-w-full max-h-full rounded-lg"
-                  onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/600x400/C1EBE2/3B4540?text=Mon+Role"; }}
-                />
-              </div>
-              <div className="md:w-1/2 text-left">
-                <p className="mb-4">
-                  En tant qu'éducatrice spécialisée dans la 3ème voie, mon rôle est de créer un environnement où votre enfant peut s'épanouir pleinement.
-                </p>
-                <p className="mb-4">
-                  Je suis là pour observer, comprendre et adapter les outils pédagogiques aux besoins uniques de chaque enfant.
-                </p>
-                <p>
-                  Mon objectif est de révéler le potentiel de votre enfant et de vous donner les clés pour l'accompagner au quotidien.
-                </p>
-              </div>
+          <CardContent className="flex flex-col md:flex-row items-center gap-8">
+            <div className="md:w-1/2">
+              <img
+                src={Card_5}
+                alt="Consultante éducative accompagnant parents et enfant dans un cadre bienveillant"
+                title="Consultante éducative accompagnant parents et enfant dans un cadre bienveillant"
+                className="block w-full h-auto max-w-full max-h-full rounded-lg"
+                onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/600x400/C1EBE2/3B4540?text=Mon+Role"; }}
+              />
+            </div>
+            <div className="md:w-1/2 text-left">
+              <h2 className="text-4xl font-extrabold mb-8">Mon rôle : Accompagner, Soutenir, Guider</h2>
+              <p className="mb-4">
+                En tant qu'éducatrice spécialisée dans la 3ème voie, mon rôle est de créer un environnement où votre enfant peut s'épanouir pleinement.
+              </p>
+              <p className="mb-4">
+                Je suis là pour observer, comprendre et adapter les outils pédagogiques aux besoins uniques de chaque enfant.
+              </p>
+              <p>
+                Mon objective est de révéler le potentiel de votre enfant et de vous donner les clés pour l'accompagner au quotidien.
+              </p>
             </div>
           </CardContent>
         </Card>
@@ -498,7 +543,7 @@ export default function App() {
 
       {/* Card 7 - Who I Accompany */}
       <section id="who-i-accompany" ref={sectionRefs.current['who-i-accompany']} className="w-full mb-10">
-        <Card className="p-6 custom-shadow w-full" style={{ backgroundColor: '#FAFFFA' }}>
+        <Card className="p-6 custom-shadow w-full min-h-[200px]" style={{ backgroundColor: '#FAFFFA' }}> {/* Added min-h */}
           <CardContent>
             <h2 className="text-4xl font-extrabold mb-8 text-left">Qui j\'accompagne?</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -535,8 +580,9 @@ export default function App() {
             <div className="flex justify-center items-center mb-8">
               <img
                 src={Card_8_SVG}
-                alt="Illustration of services"
-                className="w-full h-auto max-w-full max-h-full rounded-lg"
+                alt="Schéma en fleur à cinq pétales avec symboles : horloge, puzzle, main, cœur et toque de diplômé"
+                title="Schéma en fleur à cinq pétales avec symboles : horloge, puzzle, main, cœur et toque de diplômé"
+                className="block w-full h-auto max-w-full max-h-full rounded-lg"
                 onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/600x400/C1EBE2/3B4540?text=Services+Illustration"; }}
               />
             </div>
@@ -577,44 +623,55 @@ export default function App() {
       {/* Card 9 - Five Pillars Section */}
       <section id="five-pillars-section" ref={sectionRefs.current['five-pillars-section']} className="w-full mb-10">
         <Card className="p-6 custom-shadow w-full" style={{ backgroundColor: '#FAFFFA' }}>
-          <CardContent>
-            <h2 className="text-4xl font-extrabold mb-8 text-left">Les 5 piliers de la 3ème voie</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="flex items-start gap-3">
-                <span className="text-2xl font-bold text-[#438951]">1.</span>
-                <div>
-                  <h3 className="text-xl font-extrabold mb-1">Individualisation</h3>
-                  <p className="text-sm">Un parcours unique pour chaque enfant.</p>
+          <CardContent className="flex flex-col md:flex-row items-center gap-8">
+            <div className="md:w-1/2">
+              <h2 className="text-4xl font-extrabold mb-8 text-left">Les 5 piliers de la 3ème voie</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl font-bold text-[#438951]">1.</span>
+                  <div>
+                    <h3 className="text-xl font-extrabold mb-1">Individualisation</h3>
+                    <p className="text-sm">Un parcours unique pour chaque enfant.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl font-bold text-[#438951]">2.</span>
+                  <div>
+                    <h3 className="text-xl font-extrabold mb-1">Co-construction</h3>
+                    <p className="text-sm">Parents et éducateurs travaillent main dans la main.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl font-bold text-[#438951]">3.</span>
+                  <div>
+                    <h3 className="text-xl font-extrabold mb-1">Bienveillance</h3>
+                    <p className="text-sm">Un environnement sécurisant et respectueux.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl font-bold text-[#438951]">4.</span>
+                  <div>
+                    <h3 className="text-xl font-extrabold mb-1">Autonomie</h3>
+                    <p className="text-sm">Développer la capacité de l'enfant à apprendre par lui-même.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl font-bold text-[#438951]">5.</span>
+                  <div>
+                    <h3 className="text-xl font-extrabold mb-1">Connexion à la nature</h3>
+                    <p className="text-sm">Apprendre en contact avec l'environnement.</p>
+                  </div>
                 </div>
               </div>
-              <div className="flex items-start gap-3">
-                <span className="text-2xl font-bold text-[#438951]">2.</span>
-                <div>
-                  <h3 className="text-xl font-extrabold mb-1">Co-construction</h3>
-                  <p className="text-sm">Parents et éducateurs travaillent main dans la main.</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="text-2xl font-bold text-[#438951]">3.</span>
-                <div>
-                  <h3 className="text-xl font-extrabold mb-1">Bienveillance</h3>
-                  <p className="text-sm">Un environnement sécurisant et respectueux.</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="text-2xl font-bold text-[#438951]">4.</span>
-                <div>
-                  <h3 className="text-xl font-extrabold mb-1">Autonomie</h3>
-                  <p className="text-sm">Développer la capacité de l'enfant à apprendre par lui-même.</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="text-2xl font-bold text-[#438951]">5.</span>
-                <div>
-                  <h3 className="text-xl font-extrabold mb-1">Connexion à la nature</h3>
-                  <p className="text-sm">Apprendre en contact avec l'environnement.</p>
-                </div>
-              </div>
+            </div>
+            <div className="md:w-1/2">
+              <img
+                src={Card_9}
+                alt="Parents et enfant souriant dans un environnement éducatif bienveillant"
+                title="Parents et enfant souriant dans un environnement éducatif bienveillant"
+                className="block w-full h-auto max-w-full max-h-full rounded-lg"
+                onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/600x400/C1EBE2/3B4540?text=Five+Pillars"; }}
+              />
             </div>
           </CardContent>
         </Card>
@@ -622,7 +679,7 @@ export default function App() {
 
       {/* Card 10 - Testimonials Section */}
       <section id="testimonials-section" ref={sectionRefs.current['testimonials-section']} className="w-full mb-10">
-        <Card className="p-6 custom-shadow w-full" style={{ backgroundColor: '#FAFFFA' }}>
+        <Card className="p-6 custom-shadow w-full min-h-[200px]" style={{ backgroundColor: '#FAFFFA' }}>
           <CardContent>
             <h2 className="text-4xl font-extrabold mb-8 text-left">Ce qu'ils disent de la 3ème voie</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -649,56 +706,81 @@ export default function App() {
 
       {/* Card 11 - Contact Section */}
       <section id="contact-section" ref={sectionRefs.current['contact-section']} className="w-full mb-10">
-        <Card className="p-6 custom-shadow w-full" style={{ backgroundColor: '#FAFFFA' }}>
-          <CardContent>
-            <h2 className="text-4xl font-extrabold mb-8 text-left">Contactez-moi</h2>
-            <p className="mb-6">
-              Prêt(e) à explorer la 3ème voie pour votre enfant? N'hésitez pas à me contacter.
-            </p>
-            <div className="flex flex-col gap-4">
-              <div className="flex items-center gap-3">
-                <Mail size={24} color="#438951" />
-                <a href="mailto:contact@la3emevoie.com" className="text-[#405449] hover:text-[#438951] transition-colors">contact@la3emevoie.com</a>
+        <Card className="p-6 custom-shadow w-full min-h-[200px]" style={{ backgroundColor: '#FAFFFA' }}>
+          <CardContent className="flex flex-col md:flex-row items-center gap-8">
+            <div className="md:w-1/2">
+              <h2 className="text-4xl font-extrabold mb-8 text-left">Contactez-me</h2>
+              <p className="mb-6">
+                Prêt(e) à explorer la 3ème voie pour votre enfant? N'hésitez pas à me contacter.
+              </p>
+              <div className="flex flex-col gap-4">
+                <div className="flex items-center gap-3">
+                  <Mail size={24} color="#438951" />
+                  <a href="mailto:contact@la3emevoie.com" className="text-[#405449] hover:text-[#438951] transition-colors">contact@la3emevoie.com</a>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Phone size={24} color="#438951" />
+                  <a href="tel:+33612345678" className="text-[#405449] hover:text-[#438951] transition-colors">+33 6 12 34 56 78</a>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Home size={24} color="#438951" />
+                  <p className="text-[#405449]">123 Rue de l'Éducation, 75001 Paris, France</p>
+                </div>
               </div>
-              <div className="flex items-center gap-3">
-                <Phone size={24} color="#438951" />
-                <a href="tel:+33612345678" className="text-[#405449] hover:text-[#438951] transition-colors">+33 6 12 34 56 78</a>
-              </div>
-              <div className="flex items-center gap-3">
-                <Home size={24} color="#438951" />
-                <p className="text-[#405449]">123 Rue de l'Éducation, 75001 Paris, France</p>
-              </div>
+              <Button className="mt-8" onClick={() => alert('Formulaire de contact à venir!')}>
+                Envoyer un message
+              </Button>
             </div>
-            <Button className="mt-8" onClick={() => alert('Formulaire de contact à venir!')}>
-              Envoyer un message
-            </Button>
+            <div className="md:w-1/2">
+              <img
+                src={Card_10}
+                alt="Espace de consultation chaleureux avec supports éducatifs et éléments naturels"
+                title="Espace de consultation chaleureux avec supports éducatifs et éléments naturels"
+                className="block w-full h-auto max-w-full max-h-full rounded-lg"
+                onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/600x400/C1EBE2/3B4540?text=Contact+Image"; }}
+              />
+            </div>
           </CardContent>
         </Card>
       </section>
 
       {/* Card 12 - Free Resources Section */}
       <section id="free-resources-section" ref={sectionRefs.current['free-resources-section']} className="w-full mb-10">
-        <Card className="p-6 custom-shadow w-full" style={{ backgroundColor: '#FAFFFA' }}>
+        <Card className="p-6 custom-shadow w-full min-h-[200px]" style={{ backgroundColor: '#FAFFFA' }}>
           <CardContent>
             <h2 className="text-4xl font-extrabold mb-8 text-left">Ressources gratuites</h2>
             <p className="mb-6">
               Découvrez des guides, articles et outils pour vous accompagner dans la 3ème voie éducative.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="p-4 rounded-lg border border-gray-200">
+              <div className="p-4 rounded-lg border border-gray-200 min-h-[180px]"> {/* Added min-h */}
                 <h3 className="text-xl font-extrabold mb-2">Guide "Comprendre l'enfant atypique"</h3>
                 <p className="text-sm mb-3">
                   Un guide complet pour décrypter les particularités de votre enfant.
                 </p>
+                <img
+                  src={Card_11}
+                  alt="Couverture colorée d’un e-book éducatif pour enfants à besoins particuliers"
+                  title="Couverture colorée d’un e-book éducatif pour enfants à besoins particuliers"
+                  className="block w-full h-auto max-w-full max-h-full rounded-lg my-4"
+                  onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/300x200/C1EBE2/3B4540?text=E-book+Cover"; }}
+                />
                 <Button className="px-4 py-2 text-sm" onClick={() => alert('Téléchargement du guide !')}>
                   Télécharger
                 </Button>
               </div>
-              <div className="p-4 rounded-lg border border-gray-200">
+              <div className="p-4 rounded-lg border border-gray-200 min-h-[180px]"> {/* Added min-h */}
                 <h3 className="text-xl font-extrabold mb-2">Webinaire "Les clés de l'épanouissement"</h3>
                 <p className="text-sm mb-3">
                   Inscrivez-vous à notre prochain webinaire gratuit.
                 </p>
+                <img
+                  src={Block_12}
+                  alt="Avant de faire dodo — version trilingue illustrée pour enfants"
+                  title="Avant de faire dodo — version trilingue illustrée pour enfants"
+                  className="block w-full h-auto max-w-full max-h-full rounded-lg my-4"
+                  onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/300x200/C1EBE2/3B4540?text=Webinar+Image"; }}
+                />
                 <Button className="px-4 py-2 text-sm" onClick={() => alert('Inscription au webinaire !')}>
                   S'inscrire
                 </Button>
@@ -710,7 +792,7 @@ export default function App() {
 
       {/* Card 13 - Capsules Banner */}
       <section id="capsules-banner" ref={sectionRefs.current['capsules-banner']} className="w-full mb-10">
-        <Card className="p-6 custom-shadow w-full text-center" style={{ backgroundColor: '#C1EBE2' }}>
+        <Card className="p-6 custom-shadow w-full text-center min-h-[150px]" style={{ backgroundColor: '#C1EBE2' }}>
           <CardContent>
             <h2 className="text-4xl font-extrabold mb-4" style={{ color: '#3B4540' }}>Découvrez nos capsules éducatives !</h2>
             <p className="text-lg mb-6" style={{ color: '#405449' }}>
