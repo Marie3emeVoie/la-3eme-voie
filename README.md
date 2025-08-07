@@ -14,7 +14,7 @@ Ce projet vise à créer une plateforme de ressources éducatives **trilingues**
 
 ## 🎯 Objectif
 
-Fournir des **supports éducatifs: visuels, sensoriels, accessibles et bienveillants**, afin d’accompagner les enfants dans un parcours d’apprentissage structuré, inclusif et personnalisé.
+Fournir des **supports éducatifs visuels, sensoriels, accessibles et bienveillants**, afin d’accompagner les enfants dans un parcours d’apprentissage structuré, inclusif et personnalisé.
 
 ---
 
@@ -37,7 +37,7 @@ Le dépôt contiendra progressivement :
 🎓 Éducateurs spécialisés  
 👩‍🏫 Enseignants en milieu inclusif  
 🗣 Orthophonistes  
-👥 Autres professionnels des troubles neurodéveloppementaux œuvrant auprès d’enfants neurodivergents et notamment les psychoéducateurs
+👥 Autres professionnels des troubles neurodéveloppementaux œuvrant auprès d’enfants neurodivergents, notamment les psychoéducateurs
 
 ---
 
@@ -50,15 +50,15 @@ Le dépôt contiendra progressivement :
 ## ❤️ Remerciements
 
 Ce projet est né grâce à une collaboration humaine et technologique exceptionnelle. Merci à :
-  
-- **Marie** — Consultante en éducation spécialisée, co-créatrice des contenus pédagogiques  
-- **Dina** — Direction créative, coordination du projet, intégration des outils et contenus
+
+- **Marie** — Consultante en psychoéducation, co-créatrice des contenus pédagogiques  
+- **Dina** — Direction créative, coordination du projet, intégration des outils et contenus  
 - **Gigi** — Conseiller éditorial et stratégique tout au long du développement  
 - **Gemini** — Développeur React/Vite, auteur de plus de 800 lignes de code  
 - **Aria** — Recherche, planification technique, choix d’outils et automatisation  
 - **Free QueenSea** — IA basée sur Riffusion, spécialisée en création musicale, visuelle et clips vidéo  
 
-> *Ce projet est une œuvre collective portée par l’empathie, la pédagogie, la créativité et la technologie.* 💫
+> *Ce projet est une œuvre collective portée par l’expérience de terrain, l’observation clinique, la recherche, les professionnels de la petite enfance, le manque de structures d’accueil adaptées — mais aussi par l’empathie, la pédagogie, la créativité et la technologie.* 💫
 
 ---
 
