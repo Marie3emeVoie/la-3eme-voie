@@ -229,9 +229,15 @@ export default function App() {
       {/* --- Floating Sidebar --- */}
       {/* Positioned on the left side, vertically centered, with animation and dynamic width */}
       <div
-        className={`fixed top-1/2 left-4 transform -translate-y-1/2 z-50 transition-all duration-500 ease-out ${sidebarVisible ? 'translate-x-0' : '-translate-x-full'}`}
-        style={{ width: isSidebarExpanded ? `${sidebarWidth}px` : '48px', height: isSidebarExpanded ? 'auto' : '96px' }} // 48px is w-12, 96px is h-24
-      >
+  className={`fixed top-4 left-2 md:top-1/2 md:left-4 md:transform md:-translate-y-1/2 z-50 transition-all duration-500 ease-out ${
+    sidebarVisible ? 'translate-x-0' : '-translate-x-full'
+  }`}
+  style={{
+    width: isSidebarExpanded ? `${sidebarWidth}px` : '48px',
+    height: isSidebarExpanded ? 'auto' : '96px',
+    maxWidth: '90vw', // Prevents overflow on mobile
+  }}
+>
         {!isSidebarExpanded ? (
           // Collapsed button state (1-inch width)
           <button
@@ -244,11 +250,12 @@ export default function App() {
         ) : (
           // Expanded sidebar state
           <div className="relative flex flex-col items-center gap-2 p-2 bg-white rounded-xl shadow-lg border border-gray-200 h-full overflow-hidden"> {/* Added overflow-hidden to prevent horizontal scrollbar */}
+           
             {/* Drag Handle */}
             <div
               className="resize-handle"
               onMouseDown={handleMouseDown}
-            ></div>
+           ></div>
 
             {/* Top row for toggle switch and close button */}
             <div className="flex justify-between items-center w-full">
@@ -296,7 +303,12 @@ export default function App() {
                 >
                   {viewType === 'filmStrip' ? (
                     <div className="relative w-full h-full"> {/* Wrapper for image and number overlay */}
-                      <img src={section.thumbnail} alt={section.title} className="block w-full h-full object-cover rounded-md max-w-full max-h-full" />
+                      <img
+                        src={section.thumbnail}
+                        alt={section.title}
+                        className="block w-full h-full object-cover aspect-video rounded-md"
+                      />
+            
                       <div className="absolute top-1 left-1 bg-black bg-opacity-50 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
                         {index + 1}
                       </div>
