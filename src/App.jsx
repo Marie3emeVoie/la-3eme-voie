@@ -118,7 +118,6 @@ const circlesData = [
 
 // Continuing Helper Components and Cards
 
-
 // Cards 3 and 3a
 <section id="impossible-choice-section" className="w-full mb-10">
   <Card className="p-6 custom-shadow w-full min-h-[200px]" style={{ backgroundColor: '#FAFFFA' }}>
@@ -127,7 +126,7 @@ const circlesData = [
       <div className="flex flex-col md:flex-row items-stretch gap-6">
         <Card className="rounded-2xl p-4 flex-1 min-h-[120px]" style={{ backgroundColor: '#FAFFFA', border: '1px solid #D1D5DB' }}>
           <CardContent>
-            <h3 className="text-xl font-extrabold mb2">École classique</h3>
+            <h3 className="text-xl font-extrabold mb-2">École classique</h3>
             <p>Souvent rigide et peu adaptée aux besoins spécifiques des enfants atypiques.</p>
           </CardContent>
         </Card>
@@ -147,6 +146,7 @@ const circlesData = [
     </CardContent>
   </Card>
 </section>
+
 <>
 <section id="third-way-principles" className="w-full mb-10 p-6 md:p-10 rounded-2xl custom-shadow" style={{ backgroundColor: '#438951' }}>
   <h2 className="text-4xl font-extrabold mb-8 text-white">La 3e Voie</h2>
@@ -186,9 +186,8 @@ const circlesData = [
     </p>
   </Card>
 </section>
-// App.jsx — Lines 211–300 (Part 3)
 
-// Cards 5, 6, 7
+// Cards 5, 6, 7 (Learning Approach)
 <section id="learning-approach" className="w-full mb-10">
   <Card className="p-6 custom-shadow w-full" style={{ backgroundColor: '#FAFFFA' }}>
     <CardContent className="flex flex-col md:flex-row items-center gap-8">
@@ -286,9 +285,8 @@ const circlesData = [
     </CardContent>
   </Card>
 </section>
-// App.jsx — Lines 311–400 (Part 4)
 
-// Cards 8, 9, 10, 11
+// Cards 8, 9, 10, 11 (Services and Pillars)
 <section id="my-services-section" className="w-full mb-10">
   <Card className="p-6 custom-shadow w-full" style={{ backgroundColor: '#FAFFFA' }}>
     <CardContent>
@@ -385,7 +383,7 @@ const circlesData = [
           alt="Parents et enfant souriant dans un environnement éducatif bienveillant"
           title="Parents et enfant souriant dans un environnement éducatif bienveillant"
           className="block w-full h-auto max-w-full max-h-full rounded-lg"
-          onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/600x400/C1EBE2/3B4540?text=Five+Pillars"; }}
+          onError={(e) => { e.target.onerror = null; e.target.src = "https://placehold.co/600x400/C1EBE2/3B4540?text=5+Piliers"; }}
         />
       </div>
     </CardContent>
