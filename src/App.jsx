@@ -18,17 +18,17 @@ import {
   Phone,
 } from "lucide-react";
 
-import Card_1 from "./assets/Card_1.png";
-import Card_2 from "./assets/Card_2.png";
-import Card_4 from "./assets/Card_4.svg";
-import Card_4a from "./assets/Card_4a.png";
-import Card_5 from "./assets/Card_5.png";
-import Card_7 from "./assets/Card_7.png";
-import Card_8 from "./assets/Card_8.svg";
-import Card_9 from "./assets/Card_9.png";
-import Card_10 from "./assets/Card_10.png";
-import Card_11 from "./assets/Card_11.png";
-import Block_12 from "./assets/Block_12.png";
+import Card_1 from "./assets/images/Card_1.png";
+import Card_2 from "./assets/images/Card_2.png";
+import Card_4 from "./assets/images/Card_4.svg";
+import Card_4a from "./assets/images/Card_4a.png";
+import Card_5 from "./assets/images/Card_5.png";
+import Card_7 from "./assets/images/Card_7.png";
+import Card_8 from "./assets/images/Card_8.svg";
+import Card_9 from "./assets/images/Card_9.png";
+import Card_10 from "./assets/images/Card_10.png";
+import Card_11 from "./assets/images/Card_11.png";
+import Block_12 from "./assets/images/Block_12.png";
 
 function Card({ children, className = "", style = {} }) {
   return (
