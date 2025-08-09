@@ -499,7 +499,6 @@ const circlesData = [
 </section>
 // App.jsx — Lines 544–600 (Part 6)
 
-```jsx
 <>
   {/* Card 11: Ressources Gratuites Section */}
   <section id="free-resources-section" className="w-full mb-10">
