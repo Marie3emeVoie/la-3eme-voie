@@ -147,7 +147,7 @@ const circlesData = [
     </CardContent>
   </Card>
 </section>
-<></>
+<>
 <section id="third-way-principles" className="w-full mb-10 p-6 md:p-10 rounded-2xl custom-shadow" style={{ backgroundColor: '#438951' }}>
   <h2 className="text-4xl font-extrabold mb-8 text-white">La 3e Voie</h2>
   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
