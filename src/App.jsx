@@ -119,14 +119,6 @@ const circlesData = [
 // Continuing Helper Components and Cards
 
 
-const circlesData = [
-  { icon: Lightbulb, text: "Approche adaptée" },
-  { icon: AlignJustify, text: "Personna-\nlisation" },
-  { icon: Clock, text: "Respect du rythme" },
-  { icon: FlaskConical, text: "Espace\nd'expéri-\nmentation" },
-  { icon: Users, text: "Inclusion des parents" },
-];
-
 // Cards 3 and 3a
 <section id="impossible-choice-section" className="w-full mb-10">
   <Card className="p-6 custom-shadow w-full min-h-[200px]" style={{ backgroundColor: '#FAFFFA' }}>
@@ -135,7 +127,7 @@ const circlesData = [
       <div className="flex flex-col md:flex-row items-stretch gap-6">
         <Card className="rounded-2xl p-4 flex-1 min-h-[120px]" style={{ backgroundColor: '#FAFFFA', border: '1px solid #D1D5DB' }}>
           <CardContent>
-            <h3 className="text-xl font-extrabold mb-2">École classique</h3>
+            <h3 className="text-xl font-extrabold mb2">École classique</h3>
             <p>Souvent rigide et peu adaptée aux besoins spécifiques des enfants atypiques.</p>
           </CardContent>
         </Card>
@@ -155,7 +147,7 @@ const circlesData = [
     </CardContent>
   </Card>
 </section>
-
+<></>
 <section id="third-way-principles" className="w-full mb-10 p-6 md:p-10 rounded-2xl custom-shadow" style={{ backgroundColor: '#438951' }}>
   <h2 className="text-4xl font-extrabold mb-8 text-white">La 3e Voie</h2>
   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
@@ -173,6 +165,7 @@ const circlesData = [
     </div>
   </div>
 </section>
+</>
 
 // Cards 4, 4a, 5 (Principles)
 <section id="principles-diagram" className="w-full mb-10">
