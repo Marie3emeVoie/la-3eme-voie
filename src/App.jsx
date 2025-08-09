@@ -117,22 +117,7 @@ const circlesData = [
 // App.jsx — Lines 96–200 (Part 2)
 
 // Continuing Helper Components and Cards
-function Testimonial({ quote, author }) {
-  return (
-    <blockquote className="relative border-t-[8px] border-[#438951] border-r border-b border-l border-gray-200 bg-white p-6 rounded-lg shadow-md">
-      <div className="absolute -top-6 left-4 w-12 h-12 bg-white border border-[#438951] rounded-full flex items-center justify-center font-fraunces text-xl">
-        <table className="text-[#438951] font-fraunces text-center leading-tight">
-          <tbody>
-            <tr><td>66</td></tr>
-            <tr><td>99</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p className="text-lg italic text-[#405449] mb-2">{quote}</p>
-      <footer className="text-sm font-bold text-[#438951]">{author}</footer>
-    </blockquote>
-  );
-}
+
 
 const circlesData = [
   { icon: Lightbulb, text: "Approche adaptée" },
