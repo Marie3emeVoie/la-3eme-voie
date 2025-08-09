@@ -542,3 +542,23 @@ const circlesData = [
     S'inscrire
   </Button>
 </div>
+        </div>
+      </CardContent>
+    </Card>
+  </section>
+
+  {/* Card 12 - Capsules Banner */}
+  <section id="capsules-banner" className="w-full mb-10">
+    <Card className="p-6 custom-shadow w-full text-center min-h-[150px]" style={{ backgroundColor: '#C1EBE2' }}>
+      <CardContent>
+        <h2 className="text-4xl font-extrabold mb-4" style={{ color: '#3B4540' }}>Découvrez nos capsules éducatives !</h2>
+        <p className="text-lg mb-6" style={{ color: '#405449' }}>
+          Des mini-formations pour approfondir des sujets spécifiques.
+        </p>
+        <Button onClick={() => alert('Accès aux capsules !')}>
+          Explorer les capsules
+        </Button>
+      </CardContent>
+    </Card>
+  </section>
+</>
