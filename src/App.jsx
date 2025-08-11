@@ -173,8 +173,8 @@ export default function App() {
 
   // Données pour les témoignages
   const testimonials = [
-      { quote: "Marie a su regarder notre fils avec humanité et exigence. Elle l'a protégé, mais elle l'a aussi porté.", author: "– Maman de Ryan, 5 ans" },
-      { quote: "Une écoute rare, des idées concrètes, et surtout un espoir réaliste. Merci.", author: "– Papa d'une enfant hypersensible" },
+      { quote: "Marie a su regarder notre fils avec humanité et exigence. Elle l'a protégé, mais elle l'a aussi porté.", author: " Maman de Ryan, 5 ans" },
+      { quote: "Une écoute rare, des idées concrètes, et surtout un espoir réaliste. Merci.", author: " Papa d'une enfant hypersensible" },
   ];
 
   const Header = ({ presentMode, setPresentMode, isMenuVisible }) => {
