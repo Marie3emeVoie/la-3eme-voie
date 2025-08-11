@@ -936,7 +936,7 @@ function Sidebar({ slides, activeIndex, onSelect, onClose, width, toggleResize }
         className={`sidebar-container overflow-y-scroll`}
         style={mode === "list" ? { height: `${clampedListHeight}px` } : { height: `${clampedFilmStripHeight}px` }}
       >
-{mode === "list" ? (
+      {mode === "list" ? ( ... ) : ( ... )}
   <div className="px-1 pt-[2px] pb-1 grid grid-cols-1 gap-[2px]">
     {slides.map((slide, index) => {
       const isSelected = index === activeIndex;
