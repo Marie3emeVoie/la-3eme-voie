@@ -5,10 +5,6 @@ import {
   Film, List, X, Play, LogOut, User
 } from 'lucide-react';
 
-// === IMPORTANT: CORRECTION DES CHEMINS D'IMAGE ===
-// Les chemins des images sont conservés tels quels pour la compatibilité.
-// Veuillez vous assurer que les images sont dans le dossier public/assets/images de votre projet.
-
 // Le composant App complet, inclus tous les styles et la logique
 export default function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -97,18 +93,19 @@ export default function App() {
     }
   };
 
-  // Tableau de données pour les diapositives
+  // Tableau de données pour les diapositives.
+  // Les chemins d'accès aux images sont maintenant des chaînes de caractères directes.
   const slides = [
     {
       title: "Card 1 Title",
       icon: Home,
-      thumbnail: '/assets/images/Card_1.png',
+      thumbnail: './assets/images/Card_1.png',
       alt: "Enfant et adulte assis dans un espace d’apprentissage lumineux et coloré, inspiré de la pédagogie Montessori"
     },
     {
       title: "Card 2 Title",
       icon: Sparkles,
-      thumbnail: '/assets/images/Card_2.png',
+      thumbnail: './assets/images/Card_2.png',
       alt: "Éducatrice bienveillante avec enfants dans un cadre d’éducation alternative"
     },
     {
@@ -126,19 +123,19 @@ export default function App() {
     {
       title: "Card 4 Title",
       icon: AlignJustify,
-      thumbnail: '/assets/images/Card_4.png',
+      thumbnail: './assets/images/Card_4.png',
       alt: "Une infographie verte avec cinq cercles reliés par des flèches. Chaque cercle contient une icône et un texte en dessous. Les étiquettes sont, de gauche à droite : « Approche adaptée », « Personnalisation », « Respect du rythme », « Espace d'expérimentation » et « Inclusion des parents »."
     },
     {
       title: "Card 4a Title",
       icon: AlignJustify,
-      thumbnail: '/assets/images/Card_4a.png',
+      thumbnail: './assets/images/Card_4a.png',
       alt: "Enseignante attentionnée avec enfants d’origines diverses dans une classe lumineuse et sécurisante"
     },
     {
       title: "Card 5 Title",
       icon: Clock,
-      thumbnail: '/assets/images/Card_5.png',
+      thumbnail: './assets/images/Card_5.png',
       alt: "Consultante éducative accompagnant parents et enfant dans un cadre bienveillant"
     },
     {
@@ -150,37 +147,37 @@ export default function App() {
     {
       title: "Card 7 Title",
       icon: Users,
-      thumbnail: '/assets/images/Card_7.png',
+      thumbnail: './assets/images/Card_7.png',
       alt: "Matériel éducatif avec supports visuels, outils sensoriels et cartes adaptées aux besoins spécifiques"
     },
     {
       title: "Card 8 Title",
       icon: GraduationCap,
-      thumbnail: '/assets/images/Card_8.svg',
+      thumbnail: './assets/images/Card_8.svg',
       alt: "Schéma en fleur à cinq pétales avec symboles : horloge, puzzle, main, cœur et toque de diplômé"
     },
     {
       title: "Card 9 Title",
       icon: Building,
-      thumbnail: '/assets/images/Card_9.png',
+      thumbnail: './assets/images/Card_9.png',
       alt: "Parents et enfant souriant dans un environnement éducatif bienveillant"
     },
     {
       title: "Card 10 Title",
       icon: Heart,
-      thumbnail: '/assets/images/Card_10.png',
+      thumbnail: './assets/images/Card_10.png',
       alt: "Espace de consultation chaleureux avec supports éducatifs et éléments naturels"
     },
     {
       title: "Card 11 Title",
       icon: Music,
-      thumbnail: '/assets/images/Card_11.png',
+      thumbnail: './assets/images/Card_11.png',
       alt: "Couverture colorée d’un e-book éducatif pour enfants à besoins particuliers"
     },
     {
       title: "Block 12 Title",
       icon: Hand,
-      thumbnail: '/assets/images/Block_12.png',
+      thumbnail: './assets/images/Block_12.png',
       alt: "Avant de faire dodo — version trilingue illustrée pour enfants"
     },
   ];
