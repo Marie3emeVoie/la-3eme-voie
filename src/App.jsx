@@ -273,7 +273,7 @@ export default function App() {
                 <div className="w-full flex flex-col justify-center items-center text-center">
                     <h2 className="text-4xl font-bold">{slides[activeIndex].title}</h2>
                     <p className="mt-4">
-                        Ceci est le corps du texte pour {slides[activeIndex].title}. La mise en page est maintenant responsive et en plein écran.
+                        "Les 5 piliers de la 3e voie éducative" - Guide pour parents d'enfants différents. {slides[activeIndex].title}. La mise en page est maintenant responsive et en plein écran.
                     </p>
                     {slides[activeIndex].thumbnail && (
                         <img
@@ -291,7 +291,7 @@ export default function App() {
                     <div className="flex-1 flex flex-col justify-center items-center text-center">
                         <h2 className="text-4xl font-bold">{slides[activeIndex].title}</h2>
                         <p className="mt-4">
-                            Ceci est le corps du texte pour {slides[activeIndex].title}. La mise en page est maintenant responsive.
+                            Fiches trilingues (français, anglais, espagnol) pour routines quotidiennes, gestion des émotions et apprentissages ludiques. {slides[activeIndex].title}. La mise en page est maintenant responsive.
                         </p>
                         {slides[activeIndex].thumbnail && (
                             <img
