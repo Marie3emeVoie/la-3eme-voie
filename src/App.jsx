@@ -5,6 +5,10 @@ import {
   Film, List, X, Play, LogOut, User
 } from 'lucide-react';
 
+// === IMPORTANT: CORRECTION DES CHEMINS D'IMAGE ===
+// Les chemins des images sont conservés tels quels pour la compatibilité.
+// Veuillez vous assurer que les images sont dans le dossier public/assets/images de votre projet.
+
 // Le composant App complet, inclus tous les styles et la logique
 export default function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -94,20 +98,18 @@ export default function App() {
   };
 
   // Tableau de données pour les diapositives
-  // NOTE: Les chemins d'images ont été remplacés par des placeholders pour garantir le bon rendu du layout.
-  // Veuillez remplacer ces URLs par les chemins d'accès corrects de vos fichiers d'images locaux.
   const slides = [
     {
       title: "Card 1 Title",
       icon: Home,
-      thumbnail: 'https://placehold.co/400x300/a2a9b4/ffffff?text=Image+1',
-      alt: "Placeholder image 1"
+      thumbnail: '/assets/images/Card_1.png',
+      alt: "Enfant et adulte assis dans un espace d’apprentissage lumineux et coloré, inspiré de la pédagogie Montessori"
     },
     {
       title: "Card 2 Title",
       icon: Sparkles,
-      thumbnail: 'https://placehold.co/400x300/a2a9b4/ffffff?text=Image+2',
-      alt: "Placeholder image 2"
+      thumbnail: '/assets/images/Card_2.png',
+      alt: "Éducatrice bienveillante avec enfants dans un cadre d’éducation alternative"
     },
     {
       title: "Card 3 Title",
@@ -124,20 +126,20 @@ export default function App() {
     {
       title: "Card 4 Title",
       icon: AlignJustify,
-      thumbnail: 'https://placehold.co/400x300/a2a9b4/ffffff?text=Image+4',
-      alt: "Placeholder image 4"
+      thumbnail: '/assets/images/Card_4.png',
+      alt: "Une infographie verte avec cinq cercles reliés par des flèches. Chaque cercle contient une icône et un texte en dessous. Les étiquettes sont, de gauche à droite : « Approche adaptée », « Personnalisation », « Respect du rythme », « Espace d'expérimentation » et « Inclusion des parents »."
     },
     {
       title: "Card 4a Title",
       icon: AlignJustify,
-      thumbnail: 'https://placehold.co/400x300/a2a9b4/ffffff?text=Image+4a',
-      alt: "Placeholder image 4a"
+      thumbnail: '/assets/images/Card_4a.png',
+      alt: "Enseignante attentionnée avec enfants d’origines diverses dans une classe lumineuse et sécurisante"
     },
     {
       title: "Card 5 Title",
       icon: Clock,
-      thumbnail: 'https://placehold.co/400x300/a2a9b4/ffffff?text=Image+5',
-      alt: "Placeholder image 5"
+      thumbnail: '/assets/images/Card_5.png',
+      alt: "Consultante éducative accompagnant parents et enfant dans un cadre bienveillant"
     },
     {
       title: "Card 6 Title",
@@ -148,38 +150,38 @@ export default function App() {
     {
       title: "Card 7 Title",
       icon: Users,
-      thumbnail: 'https://placehold.co/400x300/a2a9b4/ffffff?text=Image+7',
-      alt: "Placeholder image 7"
+      thumbnail: '/assets/images/Card_7.png',
+      alt: "Matériel éducatif avec supports visuels, outils sensoriels et cartes adaptées aux besoins spécifiques"
     },
     {
       title: "Card 8 Title",
       icon: GraduationCap,
-      thumbnail: 'https://placehold.co/400x300/a2a9b4/ffffff?text=Image+8',
-      alt: "Placeholder image 8"
+      thumbnail: '/assets/images/Card_8.svg',
+      alt: "Schéma en fleur à cinq pétales avec symboles : horloge, puzzle, main, cœur et toque de diplômé"
     },
     {
       title: "Card 9 Title",
       icon: Building,
-      thumbnail: 'https://placehold.co/400x300/a2a9b4/ffffff?text=Image+9',
-      alt: "Placeholder image 9"
+      thumbnail: '/assets/images/Card_9.png',
+      alt: "Parents et enfant souriant dans un environnement éducatif bienveillant"
     },
     {
       title: "Card 10 Title",
       icon: Heart,
-      thumbnail: 'https://placehold.co/400x300/a2a9b4/ffffff?text=Image+10',
-      alt: "Placeholder image 10"
+      thumbnail: '/assets/images/Card_10.png',
+      alt: "Espace de consultation chaleureux avec supports éducatifs et éléments naturels"
     },
     {
       title: "Card 11 Title",
       icon: Music,
-      thumbnail: 'https://placehold.co/400x300/a2a9b4/ffffff?text=Image+11',
-      alt: "Placeholder image 11"
+      thumbnail: '/assets/images/Card_11.png',
+      alt: "Couverture colorée d’un e-book éducatif pour enfants à besoins particuliers"
     },
     {
       title: "Block 12 Title",
       icon: Hand,
-      thumbnail: 'https://placehold.co/400x300/a2a9b4/ffffff?text=Image+12',
-      alt: "Placeholder image 12"
+      thumbnail: '/assets/images/Block_12.png',
+      alt: "Avant de faire dodo — version trilingue illustrée pour enfants"
     },
   ];
 
