@@ -991,4 +991,6 @@ function Sidebar({ slides, activeIndex, onSelect, onClose, width, toggleResize }
       );
     })}
   </div>
+  </div>
+
 )}
