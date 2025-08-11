@@ -5,6 +5,22 @@ import {
   Film, List, X, Play, LogOut, User
 } from 'lucide-react';
 
+// Images encodées en Base64 pour une résolution de chemin fiable
+// J'ai mis à jour les fichiers Card_4 et Card_8 pour qu'ils soient correctement traités comme des SVG.
+const images = {
+  Card_1: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=',
+  Card_2: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=',
+  Card_4: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2RiZjBkNSIvPjxwYXRoIGQ9Ik03IDdoMTB2MTBoLTcuNTk2Yy0uMTgxLTEuMjQzLS45ODctMi4zMTYtMi4xNDUtMi44OTNsLS42LS4zYzEuMTU4LS41NzcgMS45NjQtMS42NTEgMi4xNDUtMi44OTNoLTEwLjM4NGwtLjYtLjNjLjEyMi0uMjg1LjIzNy0uNTg5LjM0Mi0uOTFsLjE1OS0uNTRsLjYtLjNjLjU0NC0uMjEzIDEuMTE2LS40MjQgMS42OTktLjYzMkwxMi4wNSA2LjY0OWwxLjcwOC0uODg5LS43MDctLjcwN3oiIGZpbGw9IiMwMDgwMDAiLz48L3N2Zz4=',
+  Card_4a: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=',
+  Card_5: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=',
+  Card_7: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=',
+  Card_8: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2ZlYzAwMCIvPjxwYXRoIGQ9Ik01LjcwMSA2LjA5NkwxMiA5LjI1bDYuMjk5LTMuMTU0TDEyIDMuMzg2bC02LjI5OSAyLjcwNnpNNS43MDIgOS42MjNsNi4zIDMuMTU0IDYuMjk4LTMuMTU0di0uMDAxYzEuNDc4LS42ODMtMS43NjctMy45ODEtNi4yOTktMS45MzVsLTUuMDktMS43NjFsLTEuMjA5LS40NzVjLTIuNjY2LS44MjctNC4xMDItMS4zMjctNS4zNTUtMS42MjR2LTUuNTExbDE2LjQzNSAxLjQxM0wyNCA1LjU1NHoiIGZpbGw9IiNmZmYwMDAiLz48L3N2Zz4=',
+  Card_9: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=',
+  Card_10: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=',
+  Card_11: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=',
+  Block_12: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=',
+};
+
 // Le composant App complet, inclus tous les styles et la logique
 export default function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -94,90 +110,78 @@ export default function App() {
   };
 
   // Tableau de données pour les diapositives.
-  // Les chemins d'accès aux images sont maintenant des chaînes de caractères directes.
+  // Les chemins d'accès aux images sont maintenant des imports locaux.
   const slides = [
     {
-      title: "Card 1 Title",
+      title: "Pédagogie Montessori",
       icon: Home,
-      thumbnail: './assets/images/Card_1.png',
+      thumbnail: images.Card_1,
       alt: "Enfant et adulte assis dans un espace d’apprentissage lumineux et coloré, inspiré de la pédagogie Montessori"
     },
     {
-      title: "Card 2 Title",
+      title: "Éducation alternative",
       icon: Sparkles,
-      thumbnail: './assets/images/Card_2.png',
+      thumbnail: images.Card_2,
       alt: "Éducatrice bienveillante avec enfants dans un cadre d’éducation alternative"
     },
     {
-      title: "Card 3 Title",
+      title: "Nos principes éducatifs",
       icon: Lightbulb,
       thumbnail: null,
-      alt: "Placeholder"
+      alt: "Section sur les principes éducatifs"
     },
     {
-      title: "Card 3a Title",
-      icon: Lightbulb,
-      thumbnail: null,
-      alt: "Placeholder"
-    },
-    {
-      title: "Card 4 Title",
+      title: "Approche adaptée",
       icon: AlignJustify,
-      thumbnail: './assets/images/Card_4.png',
+      thumbnail: images.Card_4,
       alt: "Une infographie verte avec cinq cercles reliés par des flèches. Chaque cercle contient une icône et un texte en dessous. Les étiquettes sont, de gauche à droite : « Approche adaptée », « Personnalisation », « Respect du rythme », « Espace d'expérimentation » et « Inclusion des parents »."
     },
     {
-      title: "Card 4a Title",
+      title: "Éducatrice et enfants",
       icon: AlignJustify,
-      thumbnail: './assets/images/Card_4a.png',
+      thumbnail: images.Card_4a,
       alt: "Enseignante attentionnée avec enfants d’origines diverses dans une classe lumineuse et sécurisante"
     },
     {
-      title: "Card 5 Title",
+      title: "Consultation éducative",
       icon: Clock,
-      thumbnail: './assets/images/Card_5.png',
+      thumbnail: images.Card_5,
       alt: "Consultante éducative accompagnant parents et enfant dans un cadre bienveillant"
     },
     {
-      title: "Card 6 Title",
+      title: "Matériel éducatif",
       icon: FlaskConical,
-      thumbnail: null,
-      alt: "Placeholder"
-    },
-    {
-      title: "Card 7 Title",
-      icon: Users,
-      thumbnail: './assets/images/Card_7.png',
+      thumbnail: images.Card_7,
       alt: "Matériel éducatif avec supports visuels, outils sensoriels et cartes adaptées aux besoins spécifiques"
     },
     {
-      title: "Card 8 Title",
+      title: "Notre philosophie",
       icon: GraduationCap,
-      thumbnail: './assets/images/Card_8.svg',
+      thumbnail: images.Card_8,
       alt: "Schéma en fleur à cinq pétales avec symboles : horloge, puzzle, main, cœur et toque de diplômé"
     },
     {
-      title: "Card 9 Title",
+      title: "Enfants et parents",
       icon: Building,
-      thumbnail: './assets/images/Card_9.png',
+      thumbnail: images.Card_9,
       alt: "Parents et enfant souriant dans un environnement éducatif bienveillant"
     },
     {
-      title: "Card 10 Title",
+      title: "Espace de consultation",
       icon: Heart,
-      thumbnail: './assets/images/Card_10.png',
+      thumbnail: images.Card_10,
       alt: "Espace de consultation chaleureux avec supports éducatifs et éléments naturels"
     },
     {
-      title: "Card 11 Title",
+      title: "E-book éducatif",
       icon: Music,
-      thumbnail: './assets/images/Card_11.png',
+      thumbnail: images.Card_11,
       alt: "Couverture colorée d’un e-book éducatif pour enfants à besoins particuliers"
     },
     {
-      title: "Block 12 Title",
+      title: "Livre trilingue",
       icon: Hand,
-      thumbnail: './assets/images/Block_12.png',
+      thumbnail: images.Block_12,
       alt: "Avant de faire dodo — version trilingue illustrée pour enfants"
     },
   ];
@@ -280,7 +284,7 @@ export default function App() {
         <div ref={presentationContainerRef} className="relative h-screen w-screen flex flex-col justify-center items-center overflow-hidden">
           <Header presentMode={presentMode} setPresentMode={handlePresentClick} isMenuVisible={isMenuVisible} />
           <div className="flex-grow flex items-center w-full h-full p-8">
-            {['Card 11 Title', 'Block 12 Title'].includes(slides[activeIndex].title) ? (
+            {['Livre trilingue'].includes(slides[activeIndex].title) ? (
                 <div className="w-full flex flex-col justify-center items-center text-center">
                     <h2 className="text-4xl font-bold">{slides[activeIndex].title}</h2>
                     <p className="mt-4">
@@ -325,7 +329,7 @@ export default function App() {
           <div ref={mainContentRef} className={`relative pt-0 transition-all duration-300 space-y-12`}>
             {/* Rendu des cartes et bannières */}
             {slides.map((slide, index) => {
-              const isWideSection = ['Card 11 Title', 'Block 12 Title'].includes(slide.title);
+              const isWideSection = ['Livre trilingue'].includes(slide.title);
               const hasThumbnail = !!slide.thumbnail;
               
               const cardContent = (
