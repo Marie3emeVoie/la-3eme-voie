@@ -100,86 +100,72 @@ export default function App() {
   // Tableau de données pour les diapositives
   const slides = [
     {
-      title: "Card 1 Title",
-      icon: Home,
+      title: "La 3ème Voie Éducative",
       thumbnail: '/assets/images/Card_1.png',
       alt: "Enfant et adulte assis dans un espace d’apprentissage lumineux et coloré, inspiré de la pédagogie Montessori"
     },
     {
-      title: "Card 2 Title",
-      icon: Sparkles,
+      title: "Qui suis-je?",
       thumbnail: '/assets/images/Card_2.png',
       alt: "Éducatrice bienveillante avec enfants dans un cadre d’éducation alternative"
     },
     {
-      title: "Card 3 Title",
-      icon: Lightbulb,
+      title: "Le choix impossible des parents",
       thumbnail: null,
       alt: "Placeholder"
     },
     {
-      title: "Card 3a Title",
-      icon: Lightbulb,
+      title: "La 3e Voie",
       thumbnail: null,
       alt: "Placeholder"
     },
     {
-      title: "Card 4 Title",
-      icon: AlignJustify,
+      title: "Les principes de la 3ème voie",
       thumbnail: '/assets/images/Card_4.png',
       alt: "Une infographie verte avec cinq cercles reliés par des flèches. Chaque cercle contient une icône et un texte en dessous. Les étiquettes sont, de gauche à droite : « Approche adaptée », « Personnalisation », « Respect du rythme », « Espace d'expérimentation » et « Inclusion des parents »."
     },
     {
-      title: "Card 4a Title",
-      icon: AlignJustify,
+      title: "Un apprentissage serein et personnalisé",
       thumbnail: '/assets/images/Card_4a.png',
       alt: "Enseignante attentionnée avec enfants d’origines diverses dans une classe lumineuse et sécurisante"
     },
     {
-      title: "Card 5 Title",
-      icon: Clock,
+      title: "Mon rôle aujourd'hui",
       thumbnail: '/assets/images/Card_5.png',
       alt: "Consultante éducative accompagnant parents et enfant dans un cadre bienveillant"
     },
     {
-      title: "Card 6 Title",
-      icon: FlaskConical,
+      title: "Qui j'accompagne",
       thumbnail: null,
       alt: "Placeholder"
     },
     {
-      title: "Card 7 Title",
-      icon: Users,
+      title: "Mes services",
       thumbnail: '/assets/images/Card_7.png',
       alt: "Matériel éducatif avec supports visuels, outils sensoriels et cartes adaptées aux besoins spécifiques"
     },
     {
-      title: "Card 8 Title",
-      icon: GraduationCap,
+      title: "Les 5 piliers de la 3ème voie éducative",
       thumbnail: '/assets/images/Card_8.svg',
       alt: "Schéma en fleur à cinq pétales avec symboles : horloge, puzzle, main, cœur et toque de diplômé"
     },
     {
-      title: "Card 9 Title",
-      icon: Building,
+      title: "Témoignages",
       thumbnail: '/assets/images/Card_9.png',
       alt: "Parents et enfant souriant dans un environnement éducatif bienveillant"
     },
     {
-      title: "Card 10 Title",
-      icon: Heart,
+      title: "Me contacter",
       thumbnail: '/assets/images/Card_10.png',
       alt: "Espace de consultation chaleureux avec supports éducatifs et éléments naturels"
     },
     {
-      title: "Card 11 Title",
-      icon: Music,
+      title: "Ressources gratuites",
       thumbnail: '/assets/images/Card_11.png',
       alt: "Couverture colorée d’un e-book éducatif pour enfants à besoins particuliers"
     },
     {
-      title: "Block 12 Title",
-      icon: Hand,
+      title: "Capsules pédagogiques",    
       thumbnail: '/assets/images/Block_12.png',
       alt: "Avant de faire dodo — version trilingue illustrée pour enfants"
     },
@@ -187,8 +173,8 @@ export default function App() {
 
   // Données pour les témoignages
   const testimonials = [
-      { quote: "Testimonial 1.", author: "Author 1" },
-      { quote: "Testimonial 2.", author: "Author 2" },
+      { quote: "Marie a su regarder notre fils avec humanité et exigence. Elle l'a protégé, mais elle l'a aussi porté.", author: "– Maman de Ryan, 5 ans" },
+      { quote: "Une écoute rare, des idées concrètes, et surtout un espoir réaliste. Merci.", author: "– Papa d'une enfant hypersensible" },
   ];
 
   const Header = ({ presentMode, setPresentMode, isMenuVisible }) => {
