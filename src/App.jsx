@@ -5,6 +5,15 @@ import {
   Film, List, X, Play, LogOut, User
 } from 'lucide-react';
 
+// Single helper for all cases
+const getImageSrc = (slide, sig) => {
+  return slide.thumbnail && slide.thumbnail.trim() !== ""
+    ? slide.thumbnail
+    : `https://source.unsplash.com/1600x900/?${encodeURIComponent(
+        slide.fallbackKeyword || slide.title
+      )}&sig=${sig}`;
+};
+
 export default function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [presentMode, setPresentMode] = useState(false);
@@ -790,15 +799,6 @@ const slides = [
             </div>
           </div>
         );
-
-// Single helper for all cases
-const getImageSrc = (slide, sig) => {
-  return slide.thumbnail && slide.thumbnail.trim() !== ""
-    ? slide.thumbnail
-    : `https://source.unsplash.com/1600x900/?${encodeURIComponent(
-        slide.fallbackKeyword || slide.title
-      )}&sig=${sig}`;
-};
 
 case 13: // Block 12 - Banner
   return (
