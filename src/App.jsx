@@ -143,7 +143,7 @@ export default function App() {
     },
     {
       title: "Qui suis-je?",
-      thumbnail: 'https://images.unsplash.com/photo-1511895426328-dc8714efa62d?w=300&h=200&fit=crop',
+      thumbnail: '/assets/images/Card_1.png',
       alt: "Éducatrice bienveillante avec enfants dans un cadre d'éducation alternative"
     },
     {
