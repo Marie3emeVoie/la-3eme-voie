@@ -805,7 +805,7 @@ case 13: // Block 12 - Banner
     <div 
       className="relative h-96 flex items-center justify-center"
       style={{
-        backgroundImage: `url('${getImageSrc(slides[index], index)}')`
+        backgroundImage: `url('${getImageSrc(slides[index], index)}')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}
