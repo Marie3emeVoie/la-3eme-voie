@@ -203,7 +203,7 @@ const slides = [
   },
   {
     title: "Capsules pédagogiques",
-    thumbnail: '/assets/images/Card_1.png',
+    thumbnail: '/assets/images/Block_12.png',
     alt: "Ressources pédagogiques trilingues"
   }
 ];
@@ -450,8 +450,8 @@ const slides = [
           <div className="flex flex-col md:flex-row overflow-hidden rounded-lg">
             <div className="w-full md:w-1/2">
               <img
-                src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&h=400&fit=crop"
-                alt="Enfant et adulte dans un espace d'apprentissage Montessori"
+                src={slides[index].thumbnail}
+                alt={slides[index].alt}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -481,8 +481,8 @@ const slides = [
             </div>
             <div className="w-full md:w-1/2">
               <img
-                src="https://images.unsplash.com/photo-1511895426328-dc8714efa62d?w=600&h=400&fit=crop"
-                alt="Éducatrice bienveillante avec enfants"
+                src={slides[index].thumbnail}
+                alt={slides[index].alt}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -596,8 +596,8 @@ const slides = [
           <div className="flex flex-col md:flex-row overflow-hidden rounded-lg" style={{ backgroundColor: '#FAFFFA' }}>
             <div className="w-full md:w-1/2">
               <img
-                src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&h=400&fit=crop"
-                alt="Consultante en psychoéducation"
+                src={slides[index].thumbnail}
+                alt={slides[index].alt}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -665,10 +665,10 @@ const slides = [
               </div>
             </div>
             <div className="w-full md:w-1/3 flex items-center justify-center p-4">
-              <img 
-                src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&h=300&fit=crop"
-                alt="Services proposés"
-                className="w-full h-full object-cover rounded-2xl"
+              <img
+                src={slides[index].thumbnail}
+                alt={slides[index].alt}
+                className="w-full h-full object-cover"
               />
             </div>
           </div>
@@ -714,10 +714,10 @@ const slides = [
               </div>
             </div>
             <div className="w-full md:w-1/2 flex items-center justify-center p-4">
-              <img 
-                src="https://images.unsplash.com/photo-1511895426328-dc8714efa62d?w=400&h=300&fit=crop"
-                alt="Témoignages de parents"
-                className="w-full h-full object-cover rounded-2xl"
+              <img
+                src={slides[index].thumbnail}
+                alt={slides[index].alt}
+                className="w-full h-full object-cover"
               />
             </div>
           </div>
@@ -727,10 +727,10 @@ const slides = [
         return (
           <div className="flex flex-col md:flex-row h-[400px]" style={{ backgroundColor: '#FAFFFA' }}>
             <div className="w-full md:w-1/2 flex items-center justify-center p-4 order-2 md:order-1">
-              <img 
-                src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=400&h=300&fit=crop"
-                alt="Informations de contact"
-                className="w-full h-full object-cover rounded-2xl"
+              <img
+                src={slides[index].thumbnail}
+                alt={slides[index].alt}
+                className="w-full h-full object-cover"
               />
             </div>
             <div className="w-full md:w-1/2 p-8 order-1 md:order-2 flex flex-col justify-center">
@@ -782,46 +782,58 @@ const slides = [
               </div>
             </div>
             <div className="w-full md:w-1/2 flex items-center justify-center p-4">
-              <img 
-                src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=300&fit=crop"
-                alt="E-book gratuit"
-                className="w-full h-full object-cover rounded-2xl"
+              <img
+                src={slides[index].thumbnail}
+                alt={slides[index].alt}
+                className="w-full h-full object-cover"
               />
             </div>
           </div>
         );
 
-      case 13: // Block 12 - Banner
-        return (
-          <div 
-            className="relative h-96 flex items-center justify-center"
-            style={{
-              backgroundImage: "url('https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=1200&h=400&fit=crop')",
-              backgroundSize: 'cover',
-              backgroundPosition: 'center'
-            }}
-          >
-            <div 
-              className="absolute inset-0"
-              style={{ 
-                backgroundColor: 'rgba(59, 69, 64, 0.7)',
-                backdropFilter: 'blur(1px)'
-              }}
-            ></div>
-            <div className="relative z-10 text-center text-white p-8">
-              <h2 className="text-4xl font-bold mb-6">
-                Capsules pédagogiques
-              </h2>
-              <p className="text-xl mb-8 max-w-2xl">
-                Fiches trilingues (français, anglais, espagnol) pour routines quotidiennes, 
-                gestion des émotions et apprentissages ludiques.
-              </p>
-              <Button className="bg-white text-green-700 hover:bg-gray-100">
-                Découvrir les capsules
-              </Button>
-            </div>
-          </div>
-        );
+// Single helper for all cases
+const getImageSrc = (slide, sig) => {
+  return slide.thumbnail && slide.thumbnail.trim() !== ""
+    ? slide.thumbnail
+    : `https://source.unsplash.com/1600x900/?${encodeURIComponent(
+        slide.fallbackKeyword || slide.title
+      )}&sig=${sig}`;
+};
+
+case 13: // Block 12 - Banner
+  return (
+    <div 
+      className="relative h-96 flex items-center justify-center"
+      style={{
+        backgroundImage: `url('${getImageSrc(slides[index], index)}')`
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}
+    >
+      {/* Dark overlay */}
+      <div 
+        className="absolute inset-0"
+        style={{ 
+          backgroundColor: 'rgba(59, 69, 64, 0.7)',
+          backdropFilter: 'blur(1px)'
+        }}
+      ></div>
+
+      {/* Banner text/content */}
+      <div className="relative z-10 text-center text-white p-8">
+        <h2 className="text-4xl font-bold mb-6">
+          {slides[index].title}
+        </h2>
+        <p className="text-xl mb-8 max-w-2xl mx-auto">
+          Fiches trilingues (français, anglais, espagnol) pour routines quotidiennes, 
+          gestion des émotions et apprentissages ludiques.
+        </p>
+        <Button className="bg-white text-green-700 hover:bg-gray-100">
+          Découvrir les capsules
+        </Button>
+      </div>
+    </div>
+  );
 
       default:
         return null;
