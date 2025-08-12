@@ -143,7 +143,7 @@ export default function App() {
     },
     {
       title: "Qui suis-je?",
-      thumbnail: '/assets/images/Card_1.png',
+      thumbnail: '\assets\images\Card_1.png',
       alt: "Éducatrice bienveillante avec enfants dans un cadre d'éducation alternative"
     },
     {
