@@ -316,7 +316,7 @@ const slides = [
                   className="absolute left-1/2 bottom-full mb-2 p-2 bg-white rounded-md shadow-lg pointer-events-none z-10"
                   style={{ transform: 'translateX(-50%)' }}
                 >
-                  <img src={slide.thumbnail} alt={slide.alt} className="w-32 h-auto" />
+                  <img src={getImageSrc(slide, index)} alt={slide.alt} className="w-32 h-auto" />
                 </div>
               )}
             </div>
