@@ -269,19 +269,17 @@ export default function App() {
       <div className={`fixed top-0 left-0 right-0 h-[56px] bg-white z-[60] flex items-center px-8 shadow-sm transition-transform duration-300 ${presentMode ? (isMenuVisible ? 'translate-y-0' : '-translate-y-full') : ''}`}>
         <h1 className="text-2xl font-bold font-fraunces text-[#3B4540]">La 3ème Voie</h1>
         <nav className="ml-auto flex items-center gap-4">
-          <button
-            className="flex items-center gap-1 px-4 py-2 rounded-lg bg-[#0B2E79] hover:bg-[#1A4590] transition-colors duration-200"
-            onClick={() => setPresentMode(!presentMode)}
-          >
-            {presentMode ? (
-              <LogOut className="w-5 h-5 stroke-white" />
-            ) : (
-              <Play className="w-5 h-5 fill-white" />
-            )}
-            <span className="font-nobile text-white">
-              {presentMode ? "Exit" : "Present"}
-            </span>
-          </button>
+<button
+  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-[#F5F5F6] text-[#3B4540] border border-[#DFDFE0] hover:bg-[#EDEFF2] transition-colors duration-200"
+  onClick={() => setPresentMode(!presentMode)}
+>
+  {presentMode ? (
+    <LogOut className="w-5 h-5 stroke-[#3B4540]" />
+  ) : (
+    <Play className="w-5 h-5 stroke-[#3B4540]" />
+  )}
+  <span className="font-nobile">{presentMode ? "Exit" : "Present"}</span>
+</button>
           <div className="bg-white rounded-full p-2 border-2 border-transparent hover:border-[#6BA8F4] transition-colors duration-200 cursor-pointer">
             <User className="w-6 h-6 stroke-[#3B4540]" />
           </div>
