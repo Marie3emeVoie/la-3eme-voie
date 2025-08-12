@@ -135,78 +135,78 @@ export default function App() {
   );
 
   // Data arrays
-  const slides = [
-    {
-      title: "La 3ème Voie Éducative",
-      thumbnail: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=300&h=200&fit=crop',
-      alt: "Enfant et adulte assis dans un espace d'apprentissage lumineux et coloré"
-    },
-    {
-      title: "Qui suis-je?",
-      thumbnail: '\assets\images\Card_1.png',
-      alt: "Éducatrice bienveillante avec enfants dans un cadre d'éducation alternative"
-    },
-    {
-      title: "Le choix impossible des parents",
-      thumbnail: null,
-      alt: "Trois options éducatives"
-    },
-    {
-      title: "La 3e Voie",
-      thumbnail: null,
-      alt: "Alternative éducative"
-    },
-    {
-      title: "Les principes de la 3ème voie",
-      thumbnail: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=300&h=200&fit=crop',
-      alt: "Cinq principes interconnectés"
-    },
-    {
-      title: "Un apprentissage serein et personnalisé",
-      thumbnail: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=300&h=200&fit=crop',
-      alt: "Environnement d'apprentissage calme"
-    },
-    {
-      title: "Mon rôle aujourd'hui",
-      thumbnail: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=300&h=200&fit=crop',
-      alt: "Consultante en psychoéducation"
-    },
-    {
-      title: "Qui j'accompagne",
-      thumbnail: null,
-      alt: "Différents groupes accompagnés"
-    },
-    {
-      title: "Mes services",
-      thumbnail: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=300&h=200&fit=crop',
-      alt: "Services proposés"
-    },
-    {
-      title: "Les 5 piliers de la 3ème voie éducative",
-      thumbnail: 'https://images.unsplash.com/photo-1511895426328-dc8714efa62d?w=300&h=200&fit=crop',
-      alt: "Schéma des cinq piliers"
-    },
-    {
-      title: "Témoignages",
-      thumbnail: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=300&h=200&fit=crop',
-      alt: "Témoignages de parents"
-    },
-    {
-      title: "Me contacter",
-      thumbnail: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=300&h=200&fit=crop',
-      alt: "Informations de contact"
-    },
-    {
-      title: "Ressources gratuites",
-      thumbnail: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=300&h=200&fit=crop',
-      alt: "E-book gratuit"
-    },
-    {
-      title: "Capsules pédagogiques",
-      thumbnail: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=300&h=200&fit=crop',
-      alt: "Ressources pédagogiques trilingues"
-    }
-  ];
+const slides = [
+  {
+    title: "La 3ème Voie Éducative",
+    thumbnail: '/assets/images/Card_1.png',
+    alt: "Enfant et adulte assis dans un espace d'apprentissage lumineux et coloré"
+  },
+  {
+    title: "Qui suis-je?",
+    thumbnail: '/assets/images/Card_2.png',
+    alt: "Éducatrice bienveillante avec enfants dans un cadre d'éducation alternative"
+  },
+  {
+    title: "Le choix impossible des parents",
+    thumbnail: '/assets/images/Card_4.png',
+    alt: "Trois options éducatives"
+  },
+  {
+    title: "La 3e Voie",
+    thumbnail: '/assets/images/Card_4a.png',
+    alt: "Alternative éducative"
+  },
+  {
+    title: "Les principes de la 3ème voie",
+    thumbnail: '/assets/images/Card_5.png',
+    alt: "Cinq principes interconnectés"
+  },
+  {
+    title: "Un apprentissage serein et personnalisé",
+    thumbnail: '/assets/images/Card_7.png',
+    alt: "Environnement d'apprentissage calme"
+  },
+  {
+    title: "Mon rôle aujourd'hui",
+    thumbnail: '/assets/images/Card_8.svg',
+    alt: "Consultante en psychoéducation"
+  },
+  {
+    title: "Qui j'accompagne",
+    thumbnail: '/assets/images/Card_9.png',
+    alt: "Différents groupes accompagnés"
+  },
+  {
+    title: "Mes services",
+    thumbnail: '/assets/images/Card_10.png',
+    alt: "Services proposés"
+  },
+  {
+    title: "Les 5 piliers de la 3ème voie éducative",
+    thumbnail: '/assets/images/Card_11.png',
+    alt: "Schéma des cinq piliers"
+  },
+  {
+    title: "Témoignages",
+    thumbnail: '/assets/images/Block_12.png',
+    alt: "Témoignages de parents"
+  },
+  {
+    title: "Me contacter",
+    thumbnail: '/assets/images/Card_7.png',
+    alt: "Informations de contact"
+  },
+  {
+    title: "Ressources gratuites",
+    thumbnail: '/assets/images/Card_8.svg',
+    alt: "E-book gratuit"
+  },
+  {
+    title: "Capsules pédagogiques",
+    thumbnail: '/assets/images/Card_1.png',
+    alt: "Ressources pédagogiques trilingues"
+  }
+];
 
   const testimonials = [
     { quote: "Marie a su regarder notre fils avec humanité et exigence. Elle l'a protégé, mais elle l'a aussi porté.", author: "Maman de Ryan, 5 ans" },
