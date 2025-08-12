@@ -333,46 +333,46 @@ export default function App() {
     switch (index) {
       case 0: // Card 1 - Header/Hero
         return (
-<div className="two-col equal overflow-hidden rounded-sides">
-  <div className="col media">
-    <img
-      src="/assets/images/Card_1.png"
-      alt="Enfant et adulte dans un espace d'apprentissage Montessori"
-      className="rounded-left-only"
-    />
-  </div>
-  <div className="col p-8 flex flex-col justify-center" style={{ backgroundColor: '#FAFFFA' }}>
-    <h1 className="font-fraunces font-bold mb-4" style={{ color: '#3B4540', fontSize: '45px' }}>
-      La 3ème Voie Éducative
-    </h1>
-    <p className="font-nobile text-lg" style={{ color: '#405449', fontSize: '18px' }}>
-      Une approche humaine, vivante et libre pour les enfants atypiques et leurs familles.
-    </p>
-  </div>
-</div>
+          <div className="flex flex-col md:flex-row h-[400px] overflow-hidden">
+            <div className="w-full md:w-1/2 h-1/2 md:h-full">
+              <img
+                src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&h=400&fit=crop"
+                alt="Enfant et adulte dans un espace d'apprentissage Montessori"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="w-full md:w-1/2 h-1/2 md:h-full p-8 flex flex-col justify-center" style={{ backgroundColor: '#FAFFFA' }}>
+              <h1 className="font-fraunces font-bold mb-4" style={{ color: '#3B4540', fontSize: '45px' }}>
+                La 3ème Voie Éducative
+              </h1>
+              <p className="font-nobile text-lg" style={{ color: '#405449', fontSize: '18px' }}>
+                Une approche humaine, vivante et libre pour les enfants atypiques et leurs familles.
+              </p>
+            </div>
+          </div>
         );
 
       case 1: // Card 2 - Qui suis-je?
         return (
-<div className="two-col equal overflow-hidden rounded-sides" style={{ backgroundColor: '#FAFFFA' }}>
-  <div className="col p-8 flex flex-col justify-center">
-    <h2 className="text-3xl font-fraunces font-bold mb-4" style={{ color: '#3B4540' }}>
-      Qui suis-je?
-    </h2>
-    <p className="text-lg font-nobile leading-relaxed" style={{ color: '#405449' }}>
-      Je m'appelle Marie. Je suis enseignante, éducatrice, protectrice de parcours singuliers.
-      Depuis des années, j'accompagne des enfants entre 3 et 6 ans - des enfants joyeux,
-      silencieux, agités, oubliés, étiquetés... Des enfants qui ne rentrent pas dans le moule qu'on leur impose.
-    </p>
-  </div>
-  <div className="col media">
-    <img
-      src="/assets/images/Card_2.png"
-      alt="Éducatrice bienveillante avec enfants"
-      className="rounded-right-only"
-    />
-  </div>
-</div>
+          <div className="flex flex-col md:flex-row h-[400px] overflow-hidden" style={{ backgroundColor: '#FAFFFA' }}>
+            <div className="w-full md:w-1/2 h-1/2 md:h-full p-8 flex flex-col justify-center order-2 md:order-1">
+              <h2 className="text-3xl font-fraunces font-bold mb-4" style={{ color: '#3B4540' }}>
+                Qui suis-je?
+              </h2>
+              <p className="text-lg font-nobile leading-relaxed" style={{ color: '#405449' }}>
+                Je m'appelle Marie. Je suis enseignante, éducatrice, protectrice de parcours singuliers.
+                Depuis des années, j'accompagne des enfants entre 3 et 6 ans - des enfants joyeux,
+                silencieux, agités, oubliés, étiquetés... Des enfants qui ne rentrent pas dans le moule qu'on leur impose.
+              </p>
+            </div>
+            <div className="w-full md:w-1/2 h-1/2 md:h-full order-1 md:order-2">
+              <img
+                src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=600&h=400&fit=crop"
+                alt="Éducatrice bienveillante avec enfants"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
         );
 
       case 2: // Card 3 - Le choix impossible des parents
@@ -403,7 +403,7 @@ export default function App() {
       case 3: // Card 3a - La 3e Voie
         return (
           <div className="p-8" style={{ backgroundColor: '#438951' }}>
-            <h2 className="text-3xl font-fraunces font-bold mb-8 text-white text-left">
+            <h2 className="text-3xl font-fraunces font-bold mb-8 text-left text-white">
               La 3e Voie
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -432,11 +432,9 @@ export default function App() {
               Les principes de la 3ème voie
             </h2>
             <div className="flex justify-center mb-8">
-              <img 
-                src="/assets/images/Card_4.svg" 
-                alt="Cinq principes interconnectés"
-                className="max-w-full h-auto"
-              />
+              <div className="w-full max-w-md h-48 bg-gray-200 rounded-xl flex items-center justify-center">
+                <span className="text-gray-500">Card_4.svg</span>
+              </div>
             </div>
             <div className="flex flex-wrap justify-center items-center gap-4 -ml-8">
               {circlesData.map((item, idx) => (
@@ -459,8 +457,8 @@ export default function App() {
 
       case 5: // Card 4a - Un apprentissage serein
         return (
-          <div className="flex flex-col md:flex-row gap-8 p-8" style={{ backgroundColor: '#FAFFFA' }}>
-            <div className="md:w-1/2">
+          <div className="flex flex-col md:flex-row h-[400px]" style={{ backgroundColor: '#FAFFFA' }}>
+            <div className="w-full md:w-1/2 h-1/2 md:h-full p-8 flex flex-col justify-center">
               <h2 className="text-3xl font-fraunces font-bold mb-4 text-left" style={{ color: '#3B4540' }}>
                 Un apprentissage serein et personnalisé
               </h2>
@@ -470,8 +468,8 @@ export default function App() {
                 soutenu par une approche bienveillante et un accompagnement individualisé.
               </p>
             </div>
-            <div className="md:w-1/2">
-              <div className="h-64 rounded-2xl flex items-center justify-center text-xl font-nobile" 
+            <div className="w-full md:w-1/2 h-1/2 md:h-full flex items-center justify-center p-8">
+              <div className="w-full h-full rounded-2xl flex items-center justify-center text-xl font-nobile" 
                    style={{ backgroundColor: '#DEEEE1', color: '#405449' }}>
                 Apprentissage Serein
               </div>
@@ -481,25 +479,25 @@ export default function App() {
 
       case 6: // Card 5 - Mon rôle aujourd'hui
         return (
-<div className="two-col equal overflow-hidden rounded-sides" style={{ backgroundColor: '#FAFFFA' }}>
-  <div className="col p-8 flex flex-col justify-center">
-    <h2 className="text-3xl font-fraunces font-bold mb-4" style={{ color: '#3B4540' }}>
-      Qui suis-je?
-    </h2>
-    <p className="text-lg font-nobile leading-relaxed" style={{ color: '#405449' }}>
-      Je m'appelle Marie. Je suis enseignante, éducatrice, protectrice de parcours singuliers.
-      Depuis des années, j'accompagne des enfants entre 3 et 6 ans - des enfants joyeux,
-      silencieux, agités, oubliés, étiquetés... Des enfants qui ne rentrent pas dans le moule qu'on leur impose.
-    </p>
-  </div>
-  <div className="col media">
-    <img
-      src="/assets/images/Card_2.png"
-      alt="Éducatrice bienveillante avec enfants"
-      className="rounded-right-only"
-    />
-  </div>
-</div>
+          <div className="flex flex-col md:flex-row h-[400px] overflow-hidden" style={{ backgroundColor: '#FAFFFA' }}>
+            <div className="w-full md:w-1/2 h-1/2 md:h-full order-2 md:order-1">
+              <img
+                src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=600&h=400&fit=crop"
+                alt="Consultante en psychoéducation"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="w-full md:w-1/2 h-1/2 md:h-full p-8 flex flex-col justify-center order-1 md:order-2">
+              <h2 className="text-3xl font-fraunces font-bold mb-4" style={{ color: '#3B4540' }}>
+                Mon rôle aujourd'hui
+              </h2>
+              <p className="text-lg font-nobile leading-relaxed" style={{ color: '#405449' }}>
+                Je deviens consultante en psychoéducation et en accompagnement parental alternatif. 
+                Je veux être une ressource vivante pour les parents et enfants qui ne trouvent pas 
+                leur place dans les dispositifs classiques.
+              </p>
+            </div>
+          </div>
         );
 
       case 7: // Card 6 - Qui j'accompagne
@@ -530,8 +528,8 @@ export default function App() {
 
       case 8: // Card 7 - Mes services
         return (
-          <div className="flex flex-col-reverse md:flex-row gap-8 p-8" style={{ backgroundColor: '#FAFFFA' }}>
-            <div className="md:w-2/3">
+          <div className="flex flex-col-reverse md:flex-row h-[400px]" style={{ backgroundColor: '#FAFFFA' }}>
+            <div className="w-full md:w-2/3 h-2/3 md:h-full p-8 flex flex-col justify-center">
               <h2 className="text-3xl font-fraunces font-bold mb-8 text-left" style={{ color: '#3B4540' }}>
                 Mes services
               </h2>
@@ -552,11 +550,11 @@ export default function App() {
                 ))}
               </div>
             </div>
-            <div className="md:w-1/3">
+            <div className="w-full md:w-1/3 h-1/3 md:h-full flex items-center justify-center p-4">
               <img 
-                src="/assets/images/Card_7.png" 
+                src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&h=300&fit=crop"
                 alt="Services proposés"
-                className="w-full h-auto object-cover rounded-2xl"
+                className="w-full h-full object-cover rounded-2xl"
               />
             </div>
           </div>
@@ -569,11 +567,9 @@ export default function App() {
               Les 5 piliers de la 3ème voie éducative
             </h2>
             <div className="flex justify-center mb-8">
-              <img 
-                src="/assets/images/Card_8.svg" 
-                alt="Schéma des cinq piliers"
-                className="max-w-full h-auto"
-              />
+              <div className="w-full max-w-md h-48 bg-gray-200 rounded-xl flex items-center justify-center">
+                <span className="text-gray-500">Card_8.svg</span>
+              </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {pillars.map((pillar, idx) => (
@@ -592,8 +588,8 @@ export default function App() {
 
       case 10: // Card 9 - Témoignages
         return (
-          <div className="flex flex-col md:flex-row gap-8 p-8" style={{ backgroundColor: '#FAFFFA' }}>
-            <div className="md:w-1/2">
+          <div className="flex flex-col md:flex-row h-[400px]" style={{ backgroundColor: '#FAFFFA' }}>
+            <div className="w-full md:w-1/2 h-1/2 md:h-full p-8 flex flex-col justify-center">
               <h2 className="text-3xl font-fraunces font-bold mb-8 text-left" style={{ color: '#3B4540' }}>
                 Témoignages
               </h2>
@@ -603,11 +599,11 @@ export default function App() {
                 ))}
               </div>
             </div>
-            <div className="md:w-1/2">
+            <div className="w-full md:w-1/2 h-1/2 md:h-full flex items-center justify-center p-4">
               <img 
-                src="/assets/images/Card_9.png" 
+                src="https://images.unsplash.com/photo-1511895426328-dc8714efa62d?w=400&h=300&fit=crop"
                 alt="Témoignages de parents"
-                className="w-full h-auto object-cover rounded-2xl"
+                className="w-full h-full object-cover rounded-2xl"
               />
             </div>
           </div>
@@ -615,15 +611,15 @@ export default function App() {
 
       case 11: // Card 10 - Me contacter
         return (
-          <div className="flex flex-col md:flex-row gap-8 p-8" style={{ backgroundColor: '#FAFFFA' }}>
-            <div className="md:w-1/2">
+          <div className="flex flex-col md:flex-row h-[400px]" style={{ backgroundColor: '#FAFFFA' }}>
+            <div className="w-full md:w-1/2 h-1/2 md:h-full flex items-center justify-center p-4 order-2 md:order-1">
               <img 
-                src="/assets/images/Card_10.png" 
+                src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=400&h=300&fit=crop"
                 alt="Informations de contact"
-                className="w-full h-auto object-cover rounded-2xl"
+                className="w-full h-full object-cover rounded-2xl"
               />
             </div>
-            <div className="md:w-1/2">
+            <div className="w-full md:w-1/2 h-1/2 md:h-full p-8 order-1 md:order-2 flex flex-col justify-center">
               <h2 className="text-3xl font-fraunces font-bold mb-8 text-left" style={{ color: '#3B4540' }}>
                 Me contacter
               </h2>
@@ -653,8 +649,8 @@ export default function App() {
 
       case 12: // Card 11 - Ressources gratuites
         return (
-          <div className="flex flex-col md:flex-row gap-8 p-8" style={{ backgroundColor: '#FAFFFA' }}>
-            <div className="md:w-1/2">
+          <div className="flex flex-col md:flex-row h-[400px]" style={{ backgroundColor: '#FAFFFA' }}>
+            <div className="w-full md:w-1/2 h-1/2 md:h-full p-8 flex flex-col justify-center">
               <h2 className="text-3xl font-fraunces font-bold mb-8 text-left" style={{ color: '#3B4540' }}>
                 Ressources gratuites
               </h2>
@@ -671,11 +667,11 @@ export default function App() {
                 </Button>
               </div>
             </div>
-            <div className="md:w-1/2">
+            <div className="w-full md:w-1/2 h-1/2 md:h-full flex items-center justify-center p-4">
               <img 
-                src="/assets/images/Card_11.png" 
+                src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&h=300&fit=crop"
                 alt="E-book gratuit"
-                className="w-full h-auto object-cover rounded-2xl"
+                className="w-full h-full object-cover rounded-2xl"
               />
             </div>
           </div>
@@ -686,7 +682,7 @@ export default function App() {
           <div 
             className="relative h-96 flex items-center justify-center"
             style={{
-              backgroundImage: "url('/assets/images/Block_12.png')",
+              backgroundImage: "url('https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=1200&h=400&fit=crop')",
               backgroundSize: 'cover',
               backgroundPosition: 'center'
             }}
@@ -712,6 +708,9 @@ export default function App() {
             </div>
           </div>
         );
+
+      default:
+        return null;
     }
   };
 
@@ -719,85 +718,49 @@ export default function App() {
     <div
       className={`relative min-h-screen font-nobile transition-opacity duration-500 ease-in-out ${presentMode ? 'bg-white' : 'bg-[#DEEEE1]'}`}
     >
-<style>
-{`
-  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Nobile:wght@400;700&display=swap');
+      <style>
+        {`
+          @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Nobile:wght@400;700&display=swap');
 
-  :root {
-    --primary-accent: #438951;
-    --secondary-accent: #4A644E;
-    --heading-color: #3B4540;
-    --body-color: #405449;
-    --card-bg-color: #FAFFFA;
-    --page-bg-color: #DEEEE1;
-    --body-line-height: 1.6;
-  }
+          :root {
+            --primary-accent: #438951;
+            --secondary-accent: #4A644E;
+            --heading-color: #3B4540;
+            --body-color: #405449;
+            --card-bg-color: #FAFFFA;
+            --page-bg-color: #DEEEE1;
+            --body-line-height: 1.6;
+          }
 
-  .font-fraunces { font-family: 'Fraunces', serif !important; }
-  .font-nobile { font-family: 'Nobile', sans-serif !important; }
+          .font-fraunces { font-family: 'Fraunces', serif !important; }
+          .font-nobile { font-family: 'Nobile', sans-serif !important; }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Fraunces', serif !important;
-    color: var(--heading-color);
-  }
-  body, p, li, span {
-    font-family: 'Nobile', sans-serif !important;
-    color: var(--body-color);
-    line-height: var(--body-line-height);
-  }
+          h1, h2, h3, h4, h5, h6 {
+            font-family: 'Fraunces', serif !important;
+            color: var(--heading-color);
+          }
+          body, p, li, span {
+            font-family: 'Nobile', sans-serif !important;
+            color: var(--body-color);
+            line-height: var(--body-line-height);
+          }
 
-  /* Keep your custom shadow */
-  .custom-shadow { box-shadow: 6px 6px 0px var(--secondary-accent); }
+          .custom-shadow { box-shadow: 6px 6px 0px var(--secondary-accent); }
 
-  /* Scrollbar styles (keep) */
-  .sidebar-container::-webkit-scrollbar { width: 4px; }
-  .sidebar-container::-webkit-scrollbar-track { background-color: #F5F8F7; }
-  .sidebar-container::-webkit-scrollbar-thumb { background-color: #B9BCBA; border-radius: 4px; }
+          .sidebar-container::-webkit-scrollbar { width: 4px; }
+          .sidebar-container::-webkit-scrollbar-track { background-color: #F5F8F7; }
+          .sidebar-container::-webkit-scrollbar-thumb { background-color: #B9BCBA; border-radius: 4px; }
 
-  /* New: Sidebar selected item visuals (text, smoky bg, SVG stroke only) */
-  .sidebar-item.selected {
-    color: #6BA8F4 !important;
-    background: rgba(107,168,244,0.18) !important; /* smoky lighter blue */
-  }
-  .sidebar-item.selected svg {
-    stroke: #6BA8F4 !important;
-    fill: transparent !important; /* object only, no background */
-  }
-
-  /* New: Shared two-column layout helpers for aligned image/text */
-  .two-col { display: flex; flex-direction: column; }
-  @media (min-width: 768px) {
-    .two-col { flex-direction: row; align-items: stretch; }
-    .two-col .col { flex: 1 1 50%; }
-    .two-col.equal { min-height: 380px; } /* adjust height to your taste */
-  }
-  .media img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
-  /* Rounded rules that don’t create visual seams on mobile vs desktop */
-  .rounded-sides {
-    border-radius: 16px;
-  }
-  @media (min-width: 768px) {
-    .rounded-left-only {
-      border-top-left-radius: 16px;
-      border-bottom-left-radius: 16px;
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-    }
-    .rounded-right-only {
-      border-top-right-radius: 16px;
-      border-bottom-right-radius: 16px;
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-    }
-  }
-`}
-</style>
+          .sidebar-item.selected {
+            color: #6BA8F4 !important;
+            background: rgba(107,168,244,0.18) !important;
+          }
+          .sidebar-item.selected svg {
+            stroke: #6BA8F4 !important;
+            fill: transparent !important;
+          }
+        `}
+      </style>
 
       {presentMode ? (
         <div ref={presentationContainerRef} className="relative h-screen w-screen flex flex-col justify-center items-center overflow-hidden">
@@ -936,62 +899,60 @@ function Sidebar({ slides, activeIndex, onSelect, onClose, width, toggleResize }
         className={`sidebar-container overflow-y-scroll`}
         style={mode === "list" ? { height: `${clampedListHeight}px` } : { height: `${clampedFilmStripHeight}px` }}
       >
-      {mode === "list" ? ( ... ) : ( ... )}
-  <div className="px-1 pt-[2px] pb-1 grid grid-cols-1 gap-[2px]">
-    {slides.map((slide, index) => {
-      const isSelected = index === activeIndex;
-      return (
-        <div
-          key={index}
-          onClick={() => onSelect(index)}
-          className={`sidebar-item flex items-center cursor-pointer rounded-lg text-xs hover:bg-gray-100 ${
-            isSelected ? "selected" : ""
-          }`}
-        >
-          <div
-            className="w-6 flex-shrink-0 flex items-center justify-center p-1"
-            style={{ backgroundColor: "#DFDFE0" }}
-          >
-            {index + 1}
+        {mode === "list" ? (
+          <div className="px-1 pt-[2px] pb-1 grid grid-cols-1 gap-[2px]">
+            {slides.map((slide, index) => {
+              const isSelected = index === activeIndex;
+              return (
+                <div
+                  key={index}
+                  onClick={() => onSelect(index)}
+                  className={`sidebar-item flex items-center cursor-pointer rounded-lg text-xs hover:bg-gray-100 ${
+                    isSelected ? "selected" : ""
+                  }`}
+                >
+                  <div
+                    className="w-6 flex-shrink-0 flex items-center justify-center p-1"
+                    style={{ backgroundColor: "#DFDFE0" }}
+                  >
+                    {index + 1}
+                  </div>
+                  <div
+                    className="flex-1 p-1 truncate"
+                    style={{ backgroundColor: "#F5F5F6" }}
+                  >
+                    <span className="truncate">{slide.title}</span>
+                  </div>
+                </div>
+              );
+            })}
           </div>
-          <div
-            className="flex-1 p-1 truncate"
-            style={{ backgroundColor: "#F5F5F6" }}
-          >
-            <span className="truncate">{slide.title}</span>
+        ) : (
+          <div className="p-1 flex flex-col gap-[2px]">
+            {slidesWithThumbnails.map((slide, index) => {
+              const originalIndex = slides.findIndex(s => s === slide);
+              const isSelected = originalIndex === activeIndex;
+              return (
+                <div
+                  key={index}
+                  onClick={() => onSelect(originalIndex)}
+                  className={`cursor-pointer p-1 rounded-lg relative border-2 ${
+                    isSelected ? "border-[#6BA8F4]" : "border-transparent"
+                  }`}
+                >
+                  <div className="w-full h-10 bg-gray-200 rounded flex items-center justify-center">
+                    <span className="text-xs text-gray-500">Image</span>
+                  </div>
+                  <div className="absolute top-1 left-1 bg-white rounded-full w-4 h-4 flex items-center justify-center text-[10px] font-bold">
+                    {originalIndex + 1}
+                  </div>
+                  <div className="text-center text-xs mt-1 truncate">{slide.title}</div>
+                </div>
+              );
+            })}
           </div>
-        </div>
-      );
-    })}
-  </div>
-) : (
-  <div className="p-1 flex flex-col gap-[2px]">
-    {slidesWithThumbnails.map((slide, index) => {
-      const originalIndex = slides.findIndex(s => s === slide);
-      const isSelected = originalIndex === activeIndex;
-      return (
-        <div
-          key={index}
-          onClick={() => onSelect(originalIndex)}
-          className={`cursor-pointer p-1 rounded-lg relative border-2 ${
-            isSelected ? "border-[#6BA8F4]" : "border-transparent"
-          }`}
-        >
-          <img
-            src={slide.thumbnail}
-            alt={slide.alt}
-            className="w-full h-auto object-cover"
-            style={{ height: `${thumbnailHeight}px`, objectFit: 'cover' }}
-          />
-          <div className="absolute top-1 left-1 bg-white rounded-full w-4 h-4 flex items-center justify-center text-[10px] font-bold">
-            {originalIndex + 1}
-          </div>
-          <div className="text-center text-xs mt-1 truncate">{slide.title}</div>
-        </div>
-      );
-    })}
+        )}
+      </div>
     </div>
-  </div>
-  </div>
-
-)}
+  );
+}
