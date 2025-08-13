@@ -400,6 +400,7 @@ case 4: // Card 4 - Les principes de la 3ème voie
         Les principes de la 3ème voie
       </h2>
 
+      {/* Image section */}
       <div className="flex justify-center mb-8">
         <img
           src={getImageSrc(slides[index], index)}
@@ -408,22 +409,7 @@ case 4: // Card 4 - Les principes de la 3ème voie
         />
       </div>
 
-      <div className="flex flex-wrap justify-center items-center gap-4">
-        {circlesData.map((item, idx) => (
-          <div key={idx} className="flex flex-col items-center">
-            <div
-              className="w-16 h-16 rounded-full flex items-center justify-center text-white mb-2"
-              style={{ backgroundColor: '#438951' }}
-            >
-              {item.icon}
-            </div>
-            <span className="text-sm text-center" style={{ color: '#405449' }}>
-              {item.label}
-            </span>
-          </div>
-        ))}
-      </div>
-
+      {/* Closing statement */}
       <p
         className="text-center text-lg mt-8 italic"
         style={{ color: '#405449' }}
@@ -432,6 +418,7 @@ case 4: // Card 4 - Les principes de la 3ème voie
       </p>
     </div>
   );
+
 
 case 5: // Card 4a - Un apprentissage serein et personnalisé
   return (
