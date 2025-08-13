@@ -167,8 +167,8 @@ export default function App() {
   ];
 
   const testimonials = [
-    { quote: "Une écoute rare et des outils simples qui changent le quotidien.", author: "Claire, maman de Léa" },
-    { quote: "Mon fils a trouvé un espace où il peut souffler et apprendre à son rythme.", author: "Olivier, papa de Tom" },
+    { quote: "Marie a su regarder notre fils avec humanité et exigence. Elle l'a protégé, mais elle l'a aussi porté.", author: "Maman de Ryan, 5 ans" },
+    { quote: "Une écoute rare, des idées concrètes, et surtout un espoir réaliste. Merci.", author: "Papa d'une enfant hypersensible" },
     { quote: "Des pistes concrètes pour l’équipe, sans jugement et avec douceur.", author: "Sophie, enseignante" },
   ];
 
