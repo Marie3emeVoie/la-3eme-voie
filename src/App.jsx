@@ -515,6 +515,7 @@ export default function App() {
                 className="w-full h-full object-cover"
               />
             </div>
+          </div>
         );
 
       case 9: // Card 8 - Les 5 piliers de la 3ème voie éducative
@@ -621,7 +622,7 @@ export default function App() {
           </div>
         );
 
-case 13: // Block 12 - Banner Capsules pédagogiques 
+case 13: // Block 12 - Banner Capsules pédagogiques
   return (
     <div
       className="relative h-96 flex items-center justify-center"
@@ -631,22 +632,23 @@ case 13: // Block 12 - Banner Capsules pédagogiques
         backgroundPosition: 'center',
       }}
     >
-            <div
-              className="absolute inset-0"
-              style={{ backgroundColor: 'rgba(59, 69, 64, 0.7)', backdropFilter: 'blur(1px)' }}
-            ></div>
+      <div
+        className="absolute inset-0"
+        style={{ backgroundColor: 'rgba(59, 69, 64, 0.7)', backdropFilter: 'blur(1px)' }}
+      ></div>
 
-            <div className="relative z-10 text-center text-white p-8">
-              <h2 className="text-4xl font-bold mb-6">{slides[index].title}</h2>
-              <p className="text-xl mb-8 max-w-2xl mx-auto">
-                Fiches trilingues (français, anglais, espagnol) pour routines quotidiennes,
-                gestion des émotions et apprentissages ludiques.
-              </p>
-              <button className="bg-white text-green-700 hover:bg-gray-100 px-6 py-3 rounded-lg text-xl transition-colors">
-                Découvrir les capsules
-              </button>
-            </div>
-        );
+      <div className="relative z-10 text-center text-white p-8">
+        <h2 className="text-4xl font-bold mb-6">{slides[index].title}</h2>
+        <p className="text-xl mb-8 max-w-2xl mx-auto">
+          Fiches trilingues (français, anglais, espagnol) pour routines quotidiennes,
+          gestion des émotions et apprentissages ludiques.
+        </p>
+        <button className="bg-white text-green-700 hover:bg-gray-100 px-6 py-3 rounded-lg text-xl transition-colors">
+          Découvrir les capsules
+        </button>
+      </div>
+    </div>
+  );
 
       default:
         return null;
