@@ -3,7 +3,7 @@ Before
 import React, { useState, useEffect, useRef } from 'react';
 import {
   Sparkles, Lightbulb, Clock, FlaskConical, Users, Home,
-  GraduationCap, Building, Heart, Film, List, X, Play, LogOut, User, Mail, Phone
+  GraduationCap, Building, Heart, Film, List, X, Play, LogOut, User, Mail, Phone, Hand
 } from 'lucide-react';
 
 /**
@@ -621,16 +621,16 @@ export default function App() {
           </div>
         );
 
-      case 13: // Block 12 - Banner
-        return (
-          <div
-            className="relative h-96 flex items-center justify-center"
-            style={{
-              backgroundImage: `url('${getImageSrc(slides[index], index)}')`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }}
-          >
+case 13: // Block 12 - Banner Capsules pédagogiques 
+  return (
+    <div
+      className="relative h-96 flex items-center justify-center"
+      style={{
+        backgroundImage: `url('${getImageSrc(slides[index], index)}')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
             <div
               className="absolute inset-0"
               style={{ backgroundColor: 'rgba(59, 69, 64, 0.7)', backdropFilter: 'blur(1px)' }}
@@ -646,7 +646,6 @@ export default function App() {
                 Découvrir les capsules
               </button>
             </div>
-          </div>
         );
 
       default:
