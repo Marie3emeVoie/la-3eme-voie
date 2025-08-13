@@ -156,16 +156,6 @@ const slides = [
     alt: "Éducatrice bienveillante avec enfants dans un cadre d'éducation alternative"
   },
   {
-    title: "Le choix impossible des parents",
-    thumbnail: '/assets/images/Card_4.png',
-    alt: "Trois options éducatives"
-  },
-  {
-    title: "La 3e Voie",
-    thumbnail: '/assets/images/Card_4a.png',
-    alt: "Alternative éducative"
-  },
-  {
     title: "Les principes de la 3ème voie",
     thumbnail: '/assets/images/Card_5.png',
     alt: "Cinq principes interconnectés"
@@ -178,42 +168,37 @@ const slides = [
   {
     title: "Mon rôle aujourd'hui",
     thumbnail: '/assets/images/Card_8.svg',
-    alt: "Consultante en psychoéducation"
-  },
-  {
-    title: "Qui j'accompagne",
-    thumbnail: '/assets/images/Card_9.png',
-    alt: "Différents groupes accompagnés"
+    alt: "Consultante éducative accompagnant parents et enfant dans un cadre bienveillant"
   },
   {
     title: "Mes services",
     thumbnail: '/assets/images/Card_10.png',
-    alt: "Services proposés"
+    alt: "Matériel éducatif avec supports visuels, outils sensoriels et cartes adaptées aux besoins spécifiques"
   },
   {
     title: "Les 5 piliers de la 3ème voie éducative",
     thumbnail: '/assets/images/Card_11.png',
-    alt: "Schéma des cinq piliers"
+    alt: "Schéma en fleur à cinq pétales avec symboles : horloge, puzzle, main, cœur et toque de diplômé"
   },
   {
     title: "Témoignages",
     thumbnail: '/assets/images/Block_12.png',
-    alt: "Témoignages de parents"
+    alt: "Parents et enfant souriant dans un environnement éducatif bienveillant"
   },
   {
     title: "Me contacter",
     thumbnail: '/assets/images/Card_7.png',
-    alt: "Informations de contact"
+    alt: "Espace de consultation chaleureux avec supports éducatifs et éléments naturels"
   },
   {
     title: "Ressources gratuites",
     thumbnail: '/assets/images/Card_8.svg',
-    alt: "E-book gratuit"
+    alt: "Couverture colorée d’un e-book éducatif pour enfants à besoins particuliers"
   },
   {
     title: "Capsules pédagogiques",
     thumbnail: '/assets/images/Block_12.png',
-    alt: "Ressources pédagogiques trilingues"
+    alt: "Avant de faire dodo — version trilingue illustrée pour enfants"
   }
 ];
 
