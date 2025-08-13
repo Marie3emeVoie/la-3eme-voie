@@ -124,53 +124,53 @@ export default function App() {
     { title: "Implication des parents", desc: "Les parents comme premiers éducateurs, actifs et impliqués" },
   ];
 
-const circlesData = [
-  { icon: <Clock className="w-6 h-6" />, label: "Approche adaptée" },
-  { icon: <FlaskConical className="w-6 h-6" />, label: "Personnalisation" },
-  { icon: <Hand className="w-6 h-6" />, label: "Respect du rythme" },
-  { icon: <Lightbulb className="w-6 h-6" />, label: "Espace d'expérimentation" },
-  { icon: <Users className="w-6 h-6" />, label: "Inclusion des parents" },
-];
+  const circlesData = [
+    { icon: <Clock className="w-6 h-6" />, label: "Approche adaptée" },
+    { icon: <FlaskConical className="w-6 h-6" />, label: "Personnalisation" },
+    { icon: <Hand className="w-6 h-6" />, label: "Respect du rythme" },
+    { icon: <Lightbulb className="w-6 h-6" />, label: "Espace d'expérimentation" },
+    { icon: <Users className="w-6 h-6" />, label: "Inclusion des parents" },  
+ ];
 
-const whoIAccompany = [
-  { icon: <Heart className="w-8 h-8" />, title: "Parents d'enfants atypiques", text: "TSA, HPI, hypersensibles et autres profils nécessitant une approche personnalisée." },
-  { icon: <Home className="w-8 h-8" />, title: "Familles en IEF", text: "Instruction en famille en quête de structure ou de soutien pédagogique." },
-  { icon: <GraduationCap className="w-8 h-8" />, title: "Professionnels de l'enfance", text: "Éducateurs et enseignants qui souhaitent sortir du cadre traditionnel." },
-  { icon: <Building className="w-8 h-8" />, title: "Structures éducatives", text: "Écoles, associations et IME souhaitant enrichir leurs pratiques." },
-];
+   const whoIAccompany = [
+     { icon: <Heart className="w-8 h-8" />, title: "Parents d'enfants atypiques", text: "TSA, HPI, hypersensibles et autres profils nécessitant une approche personnalisée." },
+     { icon: <Home className="w-8 h-8" />, title: "Familles en IEF", text: "Instruction en famille en quête de structure ou de soutien pédagogique." },
+     { icon: <GraduationCap className="w-8 h-8" />, title: "Professionnels de l'enfance", text: "Éducateurs et enseignants qui souhaitent sortir du cadre traditionnel." },
+     { icon: <Building className="w-8 h-8" />, title: "Structures éducatives", text: "Écoles, associations et IME souhaitant enrichir leurs pratiques." },
+ ];
 
-const services = [
-  {
-    title: "Accompagnement parental",
-    items: [
-      "Lecture des besoins et du rythme de l’enfant",
-      "Routines apaisées à la maison",
-      "Communication parents-enfant",
-    ],
-  },
-  {
-    title: "Enfants",
-    items: [
-      "Ateliers ludiques et sensoriels",
-      "Apprentissages personnalisés",
-      "Gestion des émotions",
-    ],
-  },
-  {
-    title: "Professionnels",
-    items: [
-      "Formation à la 3e voie",
-      "Co-construction de projets",
-      "Observations et retours de classe",
-    ],
-  },
-];
+   const services = [
+     {
+       title: "Accompagnement parental",
+       items: [
+         "Lecture des besoins et du rythme de l’enfant",
+         "Routines apaisées à la maison",
+         "Communication parents-enfant",
+       ],
+     },
+     {
+       title: "Enfants",
+       items: [
+         "Ateliers ludiques et sensoriels",
+         "Apprentissages personnalisés",
+         "Gestion des émotions",
+       ],
+     },
+     {
+        title: "Professionnels",
+        items: [
+          "Formation à la 3e voie",
+          "Co-construction de projets",
+          "Observations et retours de classe",
+       ],
+    },
+ ];
 
-const testimonials = [
-  { quote: "Une écoute rare et des outils simples qui changent le quotidien.", author: "Claire, maman de Léa" },
-  { quote: "Mon fils a trouvé un espace où il peut souffler et apprendre à son rythme.", author: "Olivier, papa de Tom" },
-  { quote: "Des pistes concrètes pour l’équipe, sans jugement et avec douceur.", author: "Sophie, enseignante" },
-];
+   const testimonials = [
+     { quote: "Une écoute rare et des outils simples qui changent le quotidien.", author: "Claire, maman de Léa" },
+     { quote: "Mon fils a trouvé un espace où il peut souffler et apprendre à son rythme.", author: "Olivier, papa de Tom" },
+     { quote: "Des pistes concrètes pour l’équipe, sans jugement et avec douceur.", author: "Sophie, enseignante" },
+ ];
 
   // Header component
   const Header = ({ presentMode, setPresentMode, isMenuVisible }) => {
@@ -390,68 +390,68 @@ const testimonials = [
           </div>
         );
 
-case 4: // Card 4 - Les principes de la 3ème voie
-  return (
-    <div className="p-8" style={{ backgroundColor: '#FAFFFA' }}>
-      <h2
-        className="text-3xl font-bold mb-8 text-left"
-        style={{ color: '#3B4540' }}
-      >
-        Les principes de la 3ème voie
-      </h2>
+      case 4: // Card 4 - Les principes de la 3ème voie
+        return (
+          <div className="p-8" style={{ backgroundColor: '#FAFFFA' }}>
+            <h2
+             className="text-3xl font-bold mb-8 text-left"
+             style={{ color: '#3B4540' }}
+            >
+             Les principes de la 3ème voie
+             </h2>
 
-      <div className="flex justify-center mb-8">
-        <img
-          src={getImageSrc(slides[index], index)}
-          alt={slides[index]?.alt || 'Les principes de la 3ème voie'}
-          className="max-w-md w-full h-auto object-contain"
-        />
-      </div>
+          <div className="flex justify-center mb-8">
+            <img
+             src={getImageSrc(slides[index], index)}
+             alt={slides[index]?.alt || 'Les principes de la 3ème voie'}
+             className="max-w-md w-full h-auto object-contain"
+           />
+         </div>
 
-      <p
-        className="text-center text-lg mt-8 italic"
-        style={{ color: '#405449' }}
-      >
-        Un espace où la différence est une richesse, pas un défaut.
-      </p>
-    </div>
-  );
+              <p
+              className="text-center text-lg mt-8 italic"
+              style={{ color: '#405449' }}
+              >
+              Un espace où la différence est une richesse, pas un défaut.
+              </p>
+             </div>
+         );
 
-case 5: // Card 4a - Un apprentissage serein et personnalisé
-  return (
-    <div
-      className="flex flex-col md:flex-row h-[400px] overflow-hidden rounded-lg"
-      style={{ backgroundColor: '#FAFFFA' }}
-    >
-      {/* Text block on left */}
-      <div className="w-full md:w-1/2 p-8 flex flex-col justify-center">
-        <h2
-          className="text-3xl font-bold mb-4"
-          style={{ color: '#3B4540' }}
-        >
-          Un apprentissage serein et personnalisé
-        </h2>
-        <p
-          className="text-lg leading-relaxed"
-          style={{ color: '#405449' }}
-        >
-          Créer un environnement calme et stimulant est au cœur de notre
-          démarche. Nous offrons un espace où chaque enfant peut explorer,
-          s&apos;exprimer et apprendre à son propre rythme, soutenu par
-          une approche bienveillante et un accompagnement individualisé.
-        </p>
-      </div>
+      case 5: // Card 4a - Un apprentissage serein et personnalisé
+        return (
+          <div
+              className="flex flex-col md:flex-row h-[400px] overflow-hidden rounded-lg"
+              style={{ backgroundColor: '#FAFFFA' }}
+          >
+              {/* Text block on left */}
+          <div className="w-full md:w-1/2 p-8 flex flex-col justify-center">
+             <h2
+             className="text-3xl font-bold mb-4"
+             style={{ color: '#3B4540' }}
+             >
+              Un apprentissage serein et personnalisé
+             </h2>
+             <p
+             className="text-lg leading-relaxed"
+             style={{ color: '#405449' }}
+            >
+              Créer un environnement calme et stimulant est au cœur de notre
+              démarche. Nous offrons un espace où chaque enfant peut explorer,
+              s&apos;exprimer et apprendre à son propre rythme, soutenu par
+              une approche bienveillante et un accompagnement individualisé.
+              </p>
+              </div>
 
-      {/* Image block on right */}
-      <div className="w-full md:w-1/2">
-        <img
-          src={getImageSrc(slides[index], index)}
-          alt={slides[index]?.alt || "Un apprentissage serein et personnalisé"}
-          className="w-full h-full object-cover"
-        />
-      </div>
-    </div>
-  );
+              {/* Image block on right */}
+          <div className="w-full md:w-1/2">
+             <img
+             src={getImageSrc(slides[index], index)}
+             alt={slides[index]?.alt || "Un apprentissage serein et personnalisé"}
+             className="w-full h-full object-cover"
+           />
+         </div>
+        </div>
+        );
 
       case 6: // Card 5 - Mon rôle aujourd'hui
         return (
@@ -512,35 +512,36 @@ case 5: // Card 4a - Un apprentissage serein et personnalisé
                 alt={slides[index].alt}
                 className="w-full h-full object-cover"
               />
+            </div>
         );
 
-case 9: // Card 8 - Les 5 piliers de la 3ème voie éducative
-  return (
-    <div className="p-8" style={{ backgroundColor: '#FAFFFA' }}>
-      <h2
-        className="text-3xl font-bold mb-8 text-left"
-        style={{ color: '#3B4540' }}
-      >
-        Les 5 piliers de la 3ème voie éducative
-      </h2>
+      case 9: // Card 8 - Les 5 piliers de la 3ème voie éducative
+        return (
+          <div className="p-8" style={{ backgroundColor: '#FAFFFA' }}>
+            <h2
+               className="text-3xl font-bold mb-8 text-left"
+               style={{ color: '#3B4540' }}
+            >
+              Les 5 piliers de la 3ème voie éducative
+            </h2>
 
-      <div className="flex justify-center mb-8">
-        <img
-          src={getImageSrc(slides[index], index)}
-          alt={slides[index]?.alt || '[Your alt text for Card 8]'}
-          className="max-w-md w-full h-auto object-contain"
-        />
-      </div>
+           <div className="flex justify-center mb-8">
+              <img
+                src={getImageSrc(slides[index], index)}
+                alt={slides[index]?.alt || '[Your alt text for Card 8]'}
+                className="max-w-md w-full h-auto object-contain"
+              />
+           </div>
 
-      {/* Your card‑specific content goes here */}
-      <p
-        className="text-center text-lg mt-8 italic"
-        style={{ color: '#405449' }}
-      >
-        [Any additional supporting text for Card 8]
-      </p>
-    </div>
-  );
+               {/* Your card‑specific content goes here */}
+               <p
+              className="text-center text-lg mt-8 italic"
+              style={{ color: '#405449' }}
+               >
+                [Any additional supporting text for Card 8]
+             </p>
+            </div>
+   );
 
       case 10: // Card 9 - Témoignages
         return (
@@ -643,6 +644,7 @@ case 9: // Card 8 - Les 5 piliers de la 3ème voie éducative
                 Découvrir les capsules
               </button>
             </div>
+          </div>
           </div>
         );
 
