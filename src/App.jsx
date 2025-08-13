@@ -124,14 +124,6 @@ export default function App() {
     { title: "Implication des parents", desc: "Les parents comme premiers éducateurs, actifs et impliqués" },
   ];
 
-  const circlesData = [
-    { icon: <Lightbulb className="w-6 h-6" />, label: "Approche adaptée" },
-    { icon: <User className="w-6 h-6" />, label: "Personnalisation" },
-    { icon: <Clock className="w-6 h-6" />, label: "Respect du rythme" },
-    { icon: <FlaskConical className="w-6 h-6" />, label: "Espace d'expérimentation" },
-    { icon: <Users className="w-6 h-6" />, label: "Inclusion des parents" },
-  ];
-
   const whoIAccompany = [
     { icon: <Home className="w-6 h-6" />, title: "Parents", text: "Parents d’enfants atypiques cherchant des repères concrets et bienveillants." },
     { icon: <GraduationCap className="w-6 h-6" />, title: "Enseignants", text: "Professionnels souhaitant adapter leurs pratiques et coopérer avec les familles." },
