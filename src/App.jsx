@@ -124,6 +124,14 @@ export default function App() {
     { title: "Implication des parents", desc: "Les parents comme premiers éducateurs, actifs et impliqués" },
   ];
 
+  const circlesData = [
+    { icon: <Clock className="w-6 h-6" />, label: "Approche adaptée" },
+    { icon: <FlaskConical className="w-6 h-6" />, label: "Personnalisation" },
+    { icon: <Hand className="w-6 h-6" />, label: "Respect du rythme" },
+    { icon: <Lightbulb className="w-6 h-6" />, label: "Espace d'expérimentation" },
+    { icon: <Users className="w-6 h-6" />, label: "Inclusion des parents" }
+  ];
+
   const whoIAccompany = [
     { icon: <Home className="w-6 h-6" />, title: "Parents", text: "Parents d’enfants atypiques cherchant des repères concrets et bienveillants." },
     { icon: <GraduationCap className="w-6 h-6" />, title: "Enseignants", text: "Professionnels souhaitant adapter leurs pratiques et coopérer avec les familles." },
@@ -398,6 +406,22 @@ case 4: // Card 4 - Les principes de la 3ème voie
           alt={slides[index]?.alt || 'Les principes de la 3ème voie'}
           className="max-w-md w-full h-auto object-contain"
         />
+      </div>
+
+      <div className="flex flex-wrap justify-center items-center gap-4">
+        {circlesData.map((item, idx) => (
+          <div key={idx} className="flex flex-col items-center">
+            <div
+              className="w-16 h-16 rounded-full flex items-center justify-center text-white mb-2"
+              style={{ backgroundColor: '#438951' }}
+            >
+              {item.icon}
+            </div>
+            <span className="text-sm text-center" style={{ color: '#405449' }}>
+              {item.label}
+            </span>
+          </div>
+        ))}
       </div>
 
       <p
