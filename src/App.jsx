@@ -400,7 +400,6 @@ case 4: // Card 4 - Les principes de la 3ème voie
         Les principes de la 3ème voie
       </h2>
 
-      {/* Image section */}
       <div className="flex justify-center mb-8">
         <img
           src={getImageSrc(slides[index], index)}
@@ -409,7 +408,6 @@ case 4: // Card 4 - Les principes de la 3ème voie
         />
       </div>
 
-      {/* Closing statement */}
       <p
         className="text-center text-lg mt-8 italic"
         style={{ color: '#405449' }}
@@ -418,7 +416,6 @@ case 4: // Card 4 - Les principes de la 3ème voie
       </p>
     </div>
   );
-
 
 case 5: // Card 4a - Un apprentissage serein et personnalisé
   return (
