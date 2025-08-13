@@ -320,7 +320,7 @@ export default function App() {
   // Render card content based on index
   const renderCardContent = (index) => {
     switch (index) {
-      case 0: // Card 1 - Header/Hero
+      case 0: // Card 1 - La 3ème Voie Éducative
         return (
           <div className="flex flex-col md:flex-row overflow-hidden rounded-lg">
             <div className="w-full md:w-1/2">
@@ -433,24 +433,37 @@ case 4: // Card 4 - Les principes de la 3ème voie
     </div>
   );
 
-      case 5: // Card 4a - Un apprentissage serein
-        return (
-          <div className="flex flex-col md:flex-row h-[400px]" style={{ backgroundColor: '#FAFFFA' }}>
-            <div className="w-full md:w-1/2 p-8 flex flex-col justify-center">
-              <h2 className="text-3xl font-bold mb-4 text-left" style={{ color: '#3B4540' }}>Un apprentissage serein et personnalisé</h2>
-              <p className="text-lg leading-relaxed" style={{ color: '#405449' }}>
-                Créer un environnement calme et stimulant est au cœur de notre démarche. Nous offrons
-                un espace où chaque enfant peut explorer, s'exprimer et apprendre à son propre rythme,
-                soutenu par une approche bienveillante et un accompagnement individualisé.
-              </p>
-            </div>
-            <div className="w-full md:w-1/2 p-8 flex items-center justify-center">
-              <div className="w-full h-48 rounded-2xl flex items-center justify-center text-xl" style={{ backgroundColor: '#DEEEE1', color: '#405449' }}>
-                Apprentissage Serein
-              </div>
-            </div>
-          </div>
-        );
+case 5: // Card 4a - Un apprentissage serein et personnalisé
+  return (
+    <div className="p-8" style={{ backgroundColor: '#FAFFFA' }}>
+      <h2
+        className="text-3xl font-bold mb-8 text-left"
+        style={{ color: '#3B4540' }}
+      >
+        [Un apprentissage serein et personnalisé]
+      </h2>
+
+      <div className="flex justify-center mb-8">
+        <img
+          src={getImageSrc(slides[index], index)}
+          alt={slides[index]?.alt || '[Your alt text for Card 5]'}
+          className="max-w-md w-full h-auto object-contain"
+        />
+      </div>
+
+      {/* Your card‑specific content goes here */}
+      <p
+        className="text-center text-lg mt-8 italic"
+        style={{ color: '#405449' }}
+      >
+Créer un environnement calme et stimulant est au cœur de notre démarche.
+Nous offrons un espace où chaque enfant peut explorer, 
+s'exprimer et apprendre à son propre rythme, soutenu par 
+une approche bienveillante et un accompagnement individualisé.
+      </p>
+    </div>
+  );
+
 
       case 6: // Card 5 - Mon rôle aujourd'hui
         return (
@@ -511,25 +524,33 @@ case 4: // Card 4 - Les principes de la 3ème voie
           </div>
         );
 
-      case 9: // Card 8 - Les 5 piliers
-        return (
-          <div className="p-8" style={{ backgroundColor: '#FAFFFA' }}>
-            <h2 className="text-3xl font-bold mb-8 text-left" style={{ color: '#3B4540' }}>Les 5 piliers de la 3ème voie éducative</h2>
-            <div className="flex justify-center mb-8">
-              <div className="w-full max-w-md h-48 bg-gray-200 rounded-xl flex items-center justify-center">
-                <span className="text-gray-500">Card_8.svg</span>
-              </div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {pillars.map((pillar, idx) => (
-                <div key={idx} className="text-center">
-                  <h3 className="text-lg font-bold mb-2" style={{ color: '#3B4540' }}>{pillar.title}</h3>
-                  <p className="text-sm" style={{ color: '#405449' }}>{pillar.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        );
+case 9: // Card 8 - Les 5 piliers de la 3ème voie éducative
+  return (
+    <div className="p-8" style={{ backgroundColor: '#FAFFFA' }}>
+      <h2
+        className="text-3xl font-bold mb-8 text-left"
+        style={{ color: '#3B4540' }}
+      >
+        Les 5 piliers de la 3ème voie éducative
+      </h2>
+
+      <div className="flex justify-center mb-8">
+        <img
+          src={getImageSrc(slides[index], index)}
+          alt={slides[index]?.alt || '[Your alt text for Card 8]'}
+          className="max-w-md w-full h-auto object-contain"
+        />
+      </div>
+
+      {/* Your card‑specific content goes here */}
+      <p
+        className="text-center text-lg mt-8 italic"
+        style={{ color: '#405449' }}
+      >
+        [Any additional supporting text for Card 8]
+      </p>
+    </div>
+  );
 
       case 10: // Card 9 - Témoignages
         return (
