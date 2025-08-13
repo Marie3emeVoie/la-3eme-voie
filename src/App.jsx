@@ -459,7 +459,7 @@ export default function App() {
         return (
           <div className="flex flex-col md:flex-row overflow-hidden rounded-lg" style={{ backgroundColor: '#FAFFFA' }}>
             <div className="w-full md:w-1/2">
-              <img src={slides[index].thumbnail} alt={slides[index].alt} className="w-full h-full object-cover" />
+              <img src={getImageSrc(slides[index], index)} alt={slides[index].alt} className="w-full h-full object-cover" />
             </div>
             <div className="w-full md:w-1/2 p-8 flex flex-col justify-center">
               <h2 className="text-3xl font-bold mb-4" style={{ color: '#3B4540' }}>Mon rôle aujourd'hui</h2>
@@ -561,7 +561,7 @@ export default function App() {
               </div>
             </div>
             <div className="w-full md:w-1/2 flex items-center justify-center p-4">
-              <img src={slides[index].thumbnail} alt={slides[index].alt} className="w-full h-full object-cover" />
+              <img src={getImageSrc(slides[index], index)} alt={slides[index].alt} className="w-full h-full object-cover" />
             </div>
           </div>
         );
@@ -570,7 +570,7 @@ export default function App() {
         return (
           <div className="flex flex-col md:flex-row h-[400px]" style={{ backgroundColor: '#FAFFFA' }}>
             <div className="w-full md:w-1/2 flex items-center justify-center p-4 order-2 md:order-1">
-              <img src={slides[index].thumbnail} alt={slides[index].alt} className="w-full h-full object-cover" />
+              <img src={getImageSrc(slides[index], index)} alt={slides[index].alt} className="w-full h-full object-cover" />
             </div>
             <div className="w-full md:w-1/2 p-8 order-1 md:order-2 flex flex-col justify-center">
               <h2 className="text-3xl font-bold mb-8 text-left" style={{ color: '#3B4540' }}>Me contacter</h2>
