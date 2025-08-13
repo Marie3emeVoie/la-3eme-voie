@@ -419,35 +419,39 @@ case 4: // Card 4 - Les principes de la 3ème voie
 
 case 5: // Card 4a - Un apprentissage serein et personnalisé
   return (
-    <div className="p-8" style={{ backgroundColor: '#FAFFFA' }}>
-      <h2
-        className="text-3xl font-bold mb-8 text-left"
-        style={{ color: '#3B4540' }}
-      >
-        [Un apprentissage serein et personnalisé]
-      </h2>
-
-      <div className="flex justify-center mb-8">
-        <img
-          src={getImageSrc(slides[index], index)}
-          alt={slides[index]?.alt || '[Your alt text for Card 5]'}
-          className="max-w-md w-full h-auto object-contain"
-        />
+    <div
+      className="flex flex-col md:flex-row h-[400px] overflow-hidden rounded-lg"
+      style={{ backgroundColor: '#FAFFFA' }}
+    >
+      {/* Text block on left */}
+      <div className="w-full md:w-1/2 p-8 flex flex-col justify-center">
+        <h2
+          className="text-3xl font-bold mb-4"
+          style={{ color: '#3B4540' }}
+        >
+          Un apprentissage serein et personnalisé
+        </h2>
+        <p
+          className="text-lg leading-relaxed"
+          style={{ color: '#405449' }}
+        >
+          Créer un environnement calme et stimulant est au cœur de notre
+          démarche. Nous offrons un espace où chaque enfant peut explorer,
+          s&apos;exprimer et apprendre à son propre rythme, soutenu par
+          une approche bienveillante et un accompagnement individualisé.
+        </p>
       </div>
 
-      {/* Your card‑specific content goes here */}
-      <p
-        className="text-center text-lg mt-8 italic"
-        style={{ color: '#405449' }}
-      >
-Créer un environnement calme et stimulant est au cœur de notre démarche.
-Nous offrons un espace où chaque enfant peut explorer, 
-s'exprimer et apprendre à son propre rythme, soutenu par 
-une approche bienveillante et un accompagnement individualisé.
-      </p>
+      {/* Image block on right */}
+      <div className="w-full md:w-1/2">
+        <img
+          src={getImageSrc(slides[index], index)}
+          alt={slides[index]?.alt || "Un apprentissage serein et personnalisé"}
+          className="w-full h-full object-cover"
+        />
+      </div>
     </div>
   );
-
 
       case 6: // Card 5 - Mon rôle aujourd'hui
         return (
@@ -503,9 +507,11 @@ une approche bienveillante et un accompagnement individualisé.
               </div>
             </div>
             <div className="w-full md:w-1/3 flex items-center justify-center p-4">
-              <img src={slides[index].thumbnail} alt={slides[index].alt} className="w-full h-full object-cover" />
-            </div>
-          </div>
+              <img
+                src={getImageSrc(slides[index], index)}
+                alt={slides[index].alt}
+                className="w-full h-full object-cover"
+              />
         );
 
 case 9: // Card 8 - Les 5 piliers de la 3ème voie éducative
