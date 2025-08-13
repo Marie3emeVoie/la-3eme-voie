@@ -626,7 +626,7 @@ export default function App() {
             style={{
               backgroundImage: `url('${getImageSrc(slides[index], index)}')`,
               backgroundSize: 'cover',
-              backgroundPosition: 'center',
+              backgroundPosition: 'center'
             }}
           >
             <div
