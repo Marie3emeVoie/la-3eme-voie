@@ -124,53 +124,53 @@ export default function App() {
     { title: "Implication des parents", desc: "Les parents comme premiers éducateurs, actifs et impliqués" },
   ];
 
-  const circlesData = [
-    { icon: <Clock className="w-6 h-6" />, label: "Approche adaptée" },
-    { icon: <FlaskConical className="w-6 h-6" />, label: "Personnalisation" },
-    { icon: <Hand className="w-6 h-6" />, label: "Respect du rythme" },
-    { icon: <Lightbulb className="w-6 h-6" />, label: "Espace d'expérimentation" },
-    { icon: <Users className="w-6 h-6" />, label: "Inclusion des parents" }
-  ];
+const circlesData = [
+  { icon: <Clock className="w-6 h-6" />, label: "Approche adaptée" },
+  { icon: <FlaskConical className="w-6 h-6" />, label: "Personnalisation" },
+  { icon: <Hand className="w-6 h-6" />, label: "Respect du rythme" },
+  { icon: <Lightbulb className="w-6 h-6" />, label: "Espace d'expérimentation" },
+  { icon: <Users className="w-6 h-6" />, label: "Inclusion des parents" },
+];
 
-  const whoIAccompany = [
-    { icon: <Home className="w-6 h-6" />, title: "Parents", text: "Parents d’enfants atypiques cherchant des repères concrets et bienveillants." },
-    { icon: <GraduationCap className="w-6 h-6" />, title: "Enseignants", text: "Professionnels souhaitant adapter leurs pratiques et coopérer avec les familles." },
-    { icon: <Heart className="w-6 h-6" />, title: "Enfants 3–6 ans", text: "Enfants joyeux, silencieux, agités… qui ne rentrent pas dans le moule." },
-    { icon: <Building className="w-6 h-6" />, title: "Structures", text: "Écoles et associations ouvertes aux approches inclusives." },
-  ];
+const whoIAccompany = [
+  { icon: <Heart className="w-8 h-8" />, title: "Parents d'enfants atypiques", text: "TSA, HPI, hypersensibles et autres profils nécessitant une approche personnalisée." },
+  { icon: <Home className="w-8 h-8" />, title: "Familles en IEF", text: "Instruction en famille en quête de structure ou de soutien pédagogique." },
+  { icon: <GraduationCap className="w-8 h-8" />, title: "Professionnels de l'enfance", text: "Éducateurs et enseignants qui souhaitent sortir du cadre traditionnel." },
+  { icon: <Building className="w-8 h-8" />, title: "Structures éducatives", text: "Écoles, associations et IME souhaitant enrichir leurs pratiques." },
+];
 
-  const services = [
-    {
-      title: "Accompagnement parental",
-      items: [
-        "Lecture des besoins et du rythme de l’enfant",
-        "Routines apaisées à la maison",
-        "Communication parents-enfant",
-      ],
-    },
-    {
-      title: "Enfants",
-      items: [
-        "Ateliers ludiques et sensoriels",
-        "Apprentissages personnalisés",
-        "Gestion des émotions",
-      ],
-    },
-    {
-      title: "Professionnels",
-      items: [
-        "Formation à la 3e voie",
-        "Co-construction de projets",
-        "Observations et retours de classe",
-      ],
-    },
-  ];
+const services = [
+  {
+    title: "Accompagnement parental",
+    items: [
+      "Lecture des besoins et du rythme de l’enfant",
+      "Routines apaisées à la maison",
+      "Communication parents-enfant",
+    ],
+  },
+  {
+    title: "Enfants",
+    items: [
+      "Ateliers ludiques et sensoriels",
+      "Apprentissages personnalisés",
+      "Gestion des émotions",
+    ],
+  },
+  {
+    title: "Professionnels",
+    items: [
+      "Formation à la 3e voie",
+      "Co-construction de projets",
+      "Observations et retours de classe",
+    ],
+  },
+];
 
-  const testimonials = [
-    { quote: "Marie a su regarder notre fils avec humanité et exigence. Elle l'a protégé, mais elle l'a aussi porté.", author: "Maman de Ryan, 5 ans" },
-    { quote: "Une écoute rare, des idées concrètes, et surtout un espoir réaliste. Merci.", author: "Papa d'une enfant hypersensible" },
-    { quote: "Des pistes concrètes pour l’équipe, sans jugement et avec douceur.", author: "Sophie, enseignante" },
-  ];
+const testimonials = [
+  { quote: "Une écoute rare et des outils simples qui changent le quotidien.", author: "Claire, maman de Léa" },
+  { quote: "Mon fils a trouvé un espace où il peut souffler et apprendre à son rythme.", author: "Olivier, papa de Tom" },
+  { quote: "Des pistes concrètes pour l’équipe, sans jugement et avec douceur.", author: "Sophie, enseignante" },
+];
 
   // Header component
   const Header = ({ presentMode, setPresentMode, isMenuVisible }) => {
