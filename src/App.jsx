@@ -390,32 +390,48 @@ export default function App() {
           </div>
         );
 
-      case 4: // Card 4 - Les principes de la 3ème voie
-        return (
-          <div className="p-8" style={{ backgroundColor: '#FAFFFA' }}>
-            <h2 className="text-3xl font-bold mb-8 text-left" style={{ color: '#3B4540' }}>Les principes de la 3ème voie</h2>
-            <div className="flex justify-center mb-8">
-              <div className="w-full max-w-md h-48 bg-gray-200 rounded-xl flex items-center justify-center">
-                <span className="text-gray-500">Diagram: 5 Principles</span>
-              </div>
+case 4: // Card 4 - Les principes de la 3ème voie
+  return (
+    <div className="p-8" style={{ backgroundColor: '#FAFFFA' }}>
+      <h2
+        className="text-3xl font-bold mb-8 text-left"
+        style={{ color: '#3B4540' }}
+      >
+        Les principes de la 3ème voie
+      </h2>
+
+      <div className="flex justify-center mb-8">
+        <img
+          src={getImageSrc(slides[index], index)}
+          alt={slides[index]?.alt || 'Les principes de la 3ème voie'}
+          className="max-w-md w-full h-auto object-contain"
+        />
+      </div>
+
+      <div className="flex flex-wrap justify-center items-center gap-4">
+        {circlesData.map((item, idx) => (
+          <div key={idx} className="flex flex-col items-center">
+            <div
+              className="w-16 h-16 rounded-full flex items-center justify-center text-white mb-2"
+              style={{ backgroundColor: '#438951' }}
+            >
+              {item.icon}
             </div>
-            <div className="flex flex-wrap justify-center items-center gap-4">
-              {circlesData.map((item, idx) => (
-                <div key={idx} className="flex flex-col items-center">
-                  <div className="w-16 h-16 rounded-full flex items-center justify-center text-white mb-2" style={{ backgroundColor: '#438951' }}>
-                    {item.icon}
-                  </div>
-                  <span className="text-sm text-center" style={{ color: '#405449' }}>
-                    {item.label}
-                  </span>
-                </div>
-              ))}
-            </div>
-            <p className="text-center text-lg mt-8 italic" style={{ color: '#405449' }}>
-              Un espace où la différence est une richesse, pas un défaut.
-            </p>
+            <span className="text-sm text-center" style={{ color: '#405449' }}>
+              {item.label}
+            </span>
           </div>
-        );
+        ))}
+      </div>
+
+      <p
+        className="text-center text-lg mt-8 italic"
+        style={{ color: '#405449' }}
+      >
+        Un espace où la différence est une richesse, pas un défaut.
+      </p>
+    </div>
+  );
 
       case 5: // Card 4a - Un apprentissage serein
         return (
