@@ -2,8 +2,8 @@ Before
 
 import React, { useState, useEffect, useRef } from 'react';
 import {
-  Sparkles, Lightbulb, Clock, FlaskConical, Users, Home,
-  GraduationCap, Building, Heart, Film, List, X, Play, LogOut, User, Mail, Phone, Hand
+  Sparkles, Lightbulb, AlignJustify, Clock, FlaskConical, Users, Home,
+  GraduationCap, Building, Heart, Music, Film, List, X, Play, LogOut, User, Hand, Mail, Phone,
 } from 'lucide-react';
 
 /**
@@ -102,20 +102,20 @@ export default function App() {
 
   // Data arrays
   const slides = [
-    { title: "La 3ème Voie Éducative", thumbnail: "/assets/images/Card_1.png", alt: "Enfant et adulte dans un espace d’apprentissage lumineux et coloré" },
-    { title: "Qui suis-je?", thumbnail: "/assets/images/Card_2.png", alt: "Éducatrice bienveillante avec enfants dans un cadre d'éducation alternative" },
+    { title: "La 3ème Voie Éducative", thumbnail: "./assets/images/Card_1.png", alt: "Enfant et adulte dans un espace d’apprentissage lumineux et coloré" },
+    { title: "Qui suis-je?", thumbnail: "./assets/images/Card_2.png", alt: "Éducatrice bienveillante avec enfants dans un cadre d'éducation alternative" },
     { title: "Le choix impossible des parents", thumbnail: null, alt: "Trois options éducatives" },
     { title: "La 3e Voie", thumbnail: null, alt: "Alternative éducative" },
-    { title: "Les principes de la 3ème voie", thumbnail: "/assets/images/Card_4.svg", alt: "Infographie des principes" },
+    { title: "Les principes de la 3ème voie", thumbnail: "./assets/images/Card_4.svg", alt: "Infographie des principes" },
     { title: "Un apprentissage serein et personnalisé", thumbnail: "/assets/images/Card_4a.png", alt: "Enseignante attentionnée avec enfants dans une classe lumineuse" },
-    { title: "Mon rôle aujourd'hui", thumbnail: "/assets/images/Card_5.png", alt: "Consultante éducative accompagnant parents et enfant" },
+    { title: "Mon rôle aujourd'hui", thumbnail: "./assets/images/Card_5.png", alt: "Consultante éducative accompagnant parents et enfant" },
     { title: "Qui j'accompagne", thumbnail: null, alt: "Différents groupes accompagnés" },
-    { title: "Mes services", thumbnail: "/assets/images/Card_7.png", alt: "Services proposés" },
-    { title: "Les 5 piliers de la 3ème voie éducative", thumbnail: "/assets/images/Card_8.svg", alt: "Schéma des cinq piliers" },
-    { title: "Témoignages", thumbnail: "/assets/images/Card_9.png", alt: "Parents et enfant souriant" },
-    { title: "Me contacter", thumbnail: "/assets/images/Card_10.png", alt: "Espace de consultation chaleureux" },
-    { title: "Ressources gratuites", thumbnail: "/assets/images/Card_11.png", alt: "Couverture colorée d’un e-book éducatif" },
-    { title: "Capsules pédagogiques", thumbnail: "/assets/images/Block_12.png", alt: "Banner Capsules pédagogiques" },
+    { title: "Mes services", thumbnail: "./assets/images/Card_7.png", alt: "Services proposés" },
+    { title: "Les 5 piliers de la 3ème voie éducative", thumbnail: "./assets/images/Card_8.svg", alt: "Schéma des cinq piliers" },
+    { title: "Témoignages", thumbnail: "./assets/images/Card_9.png", alt: "Parents et enfant souriant" },
+    { title: "Me contacter", thumbnail: "./assets/images/Card_10.png", alt: "Espace de consultation chaleureux" },
+    { title: "Ressources gratuites", thumbnail: "./assets/images/Card_11.png", alt: "Couverture colorée d’un e-book éducatif" },
+    { title: "Capsules pédagogiques", thumbnail: "./assets/images/Block_12.png", alt: "Banner Capsules pédagogiques" },
   ];
 
   const pillars = [
