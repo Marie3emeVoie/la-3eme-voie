@@ -1,5 +1,3 @@
-Before
-
 import React, { useState, useEffect, useRef } from 'react';
 import {
   Sparkles, Lightbulb, AlignJustify, Clock, FlaskConical, Users, Home,
