@@ -635,7 +635,7 @@ case 13: // Block 12 - Banner Capsules pédagogiques
         style={{ backgroundColor: 'rgba(59, 69, 64, 0.7)', backdropFilter: 'blur(1px)' }}
       ></div>
 
-      <div className="relative z-10 text-center text-white p-8">
+      <div className="relative z-10 text-left text-white p-8">
         <h2 className="text-4xl font-bold mb-6">{slides[index].title}</h2>
         <p className="text-xl mb-8 max-w-2xl mx-auto">
           Fiches trilingues (français, anglais, espagnol) pour routines quotidiennes,
