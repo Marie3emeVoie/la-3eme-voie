@@ -339,7 +339,7 @@ export default function App() {
         return (
           <div className="flex flex-col md:flex-row overflow-hidden rounded-lg" style={{ backgroundColor: '#FAFFFA' }}>
             <div className="w-full md:w-1/2 p-8 flex flex-col justify-center">
-              <h2 className="text-3xl font-bold mb-4" style={{ color: '#3B4540' }}>Qui suis-je?</h2>
+              <h1 className="font-bold mb-4 text-5xl" style={{ color: '#3B4540' }}>Qui suis-je?</h1>
               <p className="text-lg leading-relaxed" style={{ color: '#405449' }}>
                 Je m'appelle Marie. Je suis enseignante, éducatrice, protectrice de parcours singuliers.
                 Depuis des années, j'accompagne des enfants entre 3 et 6 ans — des enfants joyeux,
@@ -355,7 +355,7 @@ export default function App() {
       case 2: // Card 3 - Le choix impossible des parents
         return (
           <div className="p-8" style={{ backgroundColor: '#FAFFFA' }}>
-            <h2 className="text-3xl font-bold mb-8 text-center" style={{ color: '#3B4540' }}>Le choix impossible des parents</h2>
+            <h1 className="font-bold mb-4 text-5xl" style={{ color: '#3B4540' }}>Le choix impossible des parents</h1>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
                 { title: "École classique", text: "Souvent rigide et peu adaptée aux besoins spécifiques des enfants atypiques." },
@@ -374,7 +374,7 @@ export default function App() {
       case 3: // Card 3a - La 3e Voie
         return (
           <div className="p-8" style={{ backgroundColor: '#438951' }}>
-            <h2 className="text-3xl font-bold mb-8 text-left text-white">La 3e Voie</h2>
+            <h1 className="font-bold mb-4 text-5xl" style={{ color: '#3B4540' }}>La 3e Voie</h1>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {[
                 { title: "Entre deux extrêmes", text: "Une alternative entre l'école classique rigide et l'exclusion vers des structures spécialisées." },
@@ -393,12 +393,12 @@ export default function App() {
       case 4: // Card 4 - Les principes de la 3ème voie
         return (
           <div className="p-8" style={{ backgroundColor: '#FAFFFA' }}>
-            <h2
-             className="text-3xl font-bold mb-8 text-left"
+            <h1
+             className="font-bold mb-4 text-5xl"
              style={{ color: '#3B4540' }}
             >
              Les principes de la 3ème voie
-             </h2>
+             </h1>
 
           <div className="flex justify-center mb-8">
             <img
@@ -409,7 +409,7 @@ export default function App() {
          </div>
 
               <p
-              className="text-center text-lg mt-8 italic"
+              className="text-left text-lg mt-8 italic"
               style={{ color: '#405449' }}
               >
               Un espace où la différence est une richesse, pas un défaut.
@@ -425,12 +425,12 @@ export default function App() {
           >
               {/* Text block on left */}
           <div className="w-full md:w-1/2 p-8 flex flex-col justify-center">
-             <h2
-             className="text-3xl font-bold mb-4"
+             <h1
+             className="font-bold mb-4 text-5xl"
              style={{ color: '#3B4540' }}
              >
               Un apprentissage serein et personnalisé
-             </h2>
+             </h1>
              <p
              className="text-lg leading-relaxed"
              style={{ color: '#405449' }}
@@ -460,7 +460,7 @@ export default function App() {
               <img src={getImageSrc(slides[index], index)} alt={slides[index].alt} className="w-full h-full object-cover" />
             </div>
             <div className="w-full md:w-1/2 p-8 flex flex-col justify-center">
-              <h2 className="text-3xl font-bold mb-4" style={{ color: '#3B4540' }}>Mon rôle aujourd'hui</h2>
+              <h1 className="font-bold mb-4 text-5xl" style={{ color: '#3B4540' }}>Mon rôle aujourd'hui</h1>
               <p className="text-lg leading-relaxed" style={{ color: '#405449' }}>
                 Je deviens consultante en psychoéducation et en accompagnement parental alternatif.
                 Je veux être une ressource vivante pour les parents et enfants qui ne trouvent pas
@@ -473,7 +473,7 @@ export default function App() {
       case 7: // Card 6 - Qui j'accompagne
         return (
           <div className="p-8" style={{ backgroundColor: '#FAFFFA' }}>
-            <h2 className="text-3xl font-bold mb-8 text-left" style={{ color: '#3B4540' }}>Qui j'accompagne</h2>
+            <h1 className="font-bold mb-4 text-5xl" style={{ color: '#3B4540' }}>Qui j'accompagne</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {whoIAccompany.map((item, idx) => (
                 <div key={idx} className="bg-white p-6 rounded-2xl">
@@ -492,7 +492,7 @@ export default function App() {
         return (
           <div className="flex flex-col-reverse md:flex-row h-[400px]" style={{ backgroundColor: '#FAFFFA' }}>
             <div className="w-full md:w-2/3 p-8 flex flex-col justify-center">
-              <h2 className="text-3xl font-bold mb-8 text-left" style={{ color: '#3B4540' }}>Mes services</h2>
+              <h1 className="font-bold mb-4 text-5xl" style={{ color: '#3B4540' }}>Mes services</h1>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {services.map((service, idx) => (
                   <div key={idx}>
@@ -519,12 +519,12 @@ export default function App() {
       case 9: // Card 8 - Les 5 piliers de la 3ème voie éducative
         return (
           <div className="p-8" style={{ backgroundColor: '#FAFFFA' }}>
-            <h2
-               className="text-3xl font-bold mb-8 text-left"
+            <h1
+               className="font-bold mb-4 text-5xl"
                style={{ color: '#3B4540' }}
             >
               Les 5 piliers de la 3ème voie éducative
-            </h2>
+            </h1>
 
            <div className="flex justify-center mb-8">
               <img
@@ -548,7 +548,7 @@ export default function App() {
         return (
           <div className="flex flex-col md:flex-row h-[400px]" style={{ backgroundColor: '#FAFFFA' }}>
             <div className="w-full md:w-1/2 p-8 flex flex-col justify-center">
-              <h2 className="text-3xl font-bold mb-8 text-left" style={{ color: '#3B4540' }}>Témoignages</h2>
+              <h1 className="font-bold mb-4 text-5xl" style={{ color: '#3B4540' }}>Témoignages</h1>
               <div className="space-y-6">
                 {testimonials.map((t, idx) => (
                   <div key={idx} className="relative border-t-8 border-l-2 border-r-2 border-b-2 border-gray-300 p-6 mt-2 bg-white" style={{ borderTopColor: '#438951' }}>
@@ -571,7 +571,7 @@ export default function App() {
               <img src={getImageSrc(slides[index], index)} alt={slides[index].alt} className="w-full h-full object-cover" />
             </div>
             <div className="w-full md:w-1/2 p-8 order-1 md:order-2 flex flex-col justify-center">
-              <h2 className="text-3xl font-bold mb-8 text-left" style={{ color: '#3B4540' }}>Me contacter</h2>
+              <h1 className="font-bold mb-4 text-5xl" style={{ color: '#3B4540' }}>Me contacter</h1>
               <div className="space-y-6">
                 <div className="bg-white p-6 rounded-2xl">
                   <div className="flex items-center mb-2">
@@ -600,7 +600,7 @@ export default function App() {
         return (
           <div className="flex flex-col md:flex-row h-[400px]" style={{ backgroundColor: '#FAFFFA' }}>
             <div className="w-full md:w-1/2 p-8 flex flex-col justify-center">
-              <h2 className="text-3xl font-bold mb-8 text-left" style={{ color: '#3B4540' }}>Ressources gratuites</h2>
+              <h1 className="font-bold mb-4 text-5xl" style={{ color: '#3B4540' }}>Ressources gratuites</h1>
               <div className="bg-white p-6 rounded-2xl">
                 <h3 className="text-xl font-bold mb-4" style={{ color: '#3B4540' }}>E-book offert</h3>
                 <p className="mb-6" style={{ color: '#405449' }}>
@@ -636,7 +636,7 @@ case 13: // Block 12 - Banner Capsules pédagogiques
       ></div>
 
       <div className="relative z-10 text-left text-white p-8">
-        <h2 className="text-4xl font-bold mb-6">{slides[index].title}</h2>
+        <h1 className="font-bold mb-4 text-5xl">{slides[index].title}</h1>
         <p className="text-xl mb-8 max-w-2xl mx-auto">
           Fiches trilingues (français, anglais, espagnol) pour routines quotidiennes,
           gestion des émotions et apprentissages ludiques.
