@@ -363,7 +363,7 @@ export default function App() {
                 { title: "La 3ème voie", text: "Un espace à créer, plus humain, plus souple, plus libre et respectueux du rythme de chaque enfant." },
               ].map((item, idx) => (
                 <div key={idx} className="bg-white p-6 rounded-2xl border-2" style={{ borderColor: '#4A644E' }}>
-                  <h3 className="text-xl font-bold mb-4" style={{ color: '#3B4540' }}>{item.title}</h3>
+                  <h2 className="text-xl font-bold mb-4" style={{ color: '#3B4540' }}>{item.title}</h2>
                   <p style={{ color: '#405449' }}>{item.text}</p>
                 </div>
               ))}
@@ -382,7 +382,7 @@ export default function App() {
                 { title: "Inclusive", text: "Les parents sont pleinement intégrés dans le processus éducatif de leur enfant." },
               ].map((item, idx) => (
                 <div key={idx} className="bg-white p-6 rounded-2xl">
-                  <h3 className="text-xl font-bold mb-4" style={{ color: '#3B4540' }}>{item.title}</h3>
+                  <h2 className="text-xl font-bold mb-4" style={{ color: '#072530' }}>{item.title}</h2>
                   <p style={{ color: '#405449' }}>{item.text}</p>
                 </div>
               ))}
