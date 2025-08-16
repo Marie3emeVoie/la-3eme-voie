@@ -112,7 +112,7 @@ export default function App() {
     { title: "Les 5 piliers de la 3ème voie éducative", thumbnail: "/assets/images/Card_8.svg", alt: "Schéma en fleur à cinq pétales avec symboles : horloge, puzzle, main, cœur et toque de diplômé" },
     { title: "Témoignages", thumbnail: "/assets/images/Card_9.png", alt: "Parents et enfant souriant dans un environnement éducatif bienveillant" },
     { title: "Me contacter", thumbnail: "/assets/images/Card_10.png", alt: "Espace de consultation chaleureux avec supports éducatifs et éléments naturels" },
-    { title: "Ressources gratuites", thumbnail: "/assets/images/Card_11.png", alt: "Couverture colorée d’un e-book éducatif pour enfants à besoins particuliers" },
+    { title: "Ressources gratuites", thumbnail: "/assets/images/Block_11.png", alt: "Couverture colorée d’un e-book éducatif pour enfants à besoins particuliers" },
     { title: "Capsules pédagogiques", thumbnail: "/assets/images/Block_12.png", alt: "Avant de faire dodo — version trilingue illustrée pour enfants" },
   ];
 
@@ -371,7 +371,7 @@ export default function App() {
           </div>
         );
 
-      case 3: // Card 3a - La 3e Voie
+      case 3: // Block 3a - La 3e Voie
         return (
           <div className="p-8" style={{ backgroundColor: '#438951' }}>
             <h1 className="font-bold mb-4 text-5xl" style={{ color: '#3B4540' }}>La 3e Voie</h1>
@@ -596,7 +596,7 @@ export default function App() {
           </div>
         );
 
-      case 12: // Card 11 - Ressources gratuites
+      case 12: // Block 11 - Ressources gratuites
         return (
           <div className="flex flex-col md:flex-row h-[400px]" style={{ backgroundColor: '#FAFFFA' }}>
             <div className="w-full md:w-1/2 p-8 flex flex-col justify-center">
