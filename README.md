@@ -87,7 +87,7 @@ Vous n’êtes pas autorisé(e) à :
 - Copier, modifier, distribuer ou utiliser le Logiciel à des fins commerciales.
 - Intégrer tout ou partie du Logiciel dans un autre produit ou service sans accord écrit préalable.
 
-Pour toute demande d’utilisation commerciale, de licence ou d’intégration dans une plateforme tierce, veuillez contacter : **dinaharbi@yahoo.com**
+Pour toute demande d’utilisation commerciale, de licence ou d’intégration dans une plateforme tierce, veuillez contacter : **dina.3emevoie@gmail.com**
 
 ---
 
