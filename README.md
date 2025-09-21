@@ -1,5 +1,5 @@
 # 🌱 La 3ème Voie
-![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/Licence-CC%20BY--NC--ND%204.0-lightgrey.svg)
+![License: Copyright © 2025 Dina HARBI – Tous droits réservés](https://img.shields.io/badge/Licence-Copyright%20%C2%A9%202025%20Dina%20HARBI%20%E2%80%93%20Tous%20droits%20r%C3%A9serv%C3%A9s-lightgrey.svg)
 
 Supports éducatifs et visuels pour enfants à besoins spécifiques/particuliers et parcours d’apprentissage alternatif — animés par **Marie** et **Dina** pour *La 3ème Voie*.
 
@@ -75,19 +75,22 @@ Ce projet est né grâce à une collaboration humaine et technologique exception
 
 ## 📝 Licence
 
-Ce projet est publié sous la licence [**Creative Commons BY-NC-ND 4.0**](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.fr).  
-Cela signifie que :
+**Copyright © 2025 Dina HARBI – Tous droits réservés**
 
-- Vous pouvez **partager** librement les contenus en citant l’auteure
-- Vous **ne pouvez pas** les utiliser à des fins commerciales
-- Vous **ne pouvez pas** les modifier ni créer des œuvres dérivées
+Ce projet, y compris son code, ses visuels, ses textes et ses fichiers de documentation (le « Logiciel »), est la propriété exclusive de son auteure.
 
-📄 Voir le fichier [`LICENSE`](./LICENSE) pour plus de détails.
+Vous êtes autorisé(e) à :
+- Consulter et utiliser le Logiciel à des fins personnelles ou de test.
+- Citer ou partager des extraits à des fins non commerciales, en mentionnant l’auteure.
+
+Vous n’êtes pas autorisé(e) à :
+- Copier, modifier, distribuer ou utiliser le Logiciel à des fins commerciales.
+- Intégrer tout ou partie du Logiciel dans un autre produit ou service sans accord écrit préalable.
+
+Pour toute demande d’utilisation commerciale, de licence ou d’intégration dans une plateforme tierce, veuillez contacter : **dinaharbi@yahoo.com**
 
 ---
 
 ## 📧 Contact
 
-📮 **Email** : marie.3emevoie@gmail.com  
-💻 **GitHub** : [Marie3emeVoie](https://github.com/Marie3emeVoie)  
-📁 **Dépôt** : [la-3eme-voie](https://github.com/Marie3emeVoie/la-3eme-voie)
+📮 **Email** : marie.3emevoie@gmail.com
